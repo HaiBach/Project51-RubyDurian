@@ -25,14 +25,6 @@ if( defined('WP_INSTALLING') && WP_INSTALLING ) return;
 
 
 function func_load_vuescripts() {
-  wp_register_script(
-    'rubydurian_vuejs_next',
-    plugin_dir_url( __FILE__ ) . 'src/assets/vue-next.js',
-    array(),
-    filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-next.js' ),
-    false
-  );
-
   // wp_register_script(
   //   'rubydurian_main_js',
   //   plugin_dir_url( __FILE__ ) . 'src/main.js',
@@ -40,16 +32,49 @@ function func_load_vuescripts() {
   //   filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
   //   true
   // );
+  // wp_register_script(
+  //   'rubydurian_main_js',
+  //   plugin_dir_url( __FILE__ ) . 'dist/assets/index.08133c3c.js',
+  //   array(),
+  //   filemtime( plugin_dir_path( __FILE__ ) . 'dist/assets/index.08133c3c.js' ),
+  //   true
+  // );
+  wp_register_script(
+    'rubydurian_vuejs_next',
+    plugin_dir_url( __FILE__ ) . 'src/assets/vue-next.js',
+    array(),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-next.js' ),
+    false
+  );
   wp_register_script(
     'rubydurian_main_js',
-    plugin_dir_url( __FILE__ ) . 'dist/assets/index.08133c3c.js',
+    plugin_dir_url( __FILE__ ) . 'src/main.js',
     array(),
-    filemtime( plugin_dir_path( __FILE__ ) . 'dist/assets/index.08133c3c.js' ),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
     true
   );
 }
-
 add_action('wp_enqueue_scripts', 'func_load_vuescripts');
+
+function rubydurian_enqueue_admin($hook) {
+  if ($hook == 'toplevel_page_custompage') {
+    wp_enqueue_script(
+      'rubydurian_vuejs_next',
+      plugin_dir_url( __FILE__ ) . 'src/assets/vue-next.js',
+      array(),
+      filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-next.js' ),
+      false
+    );
+    wp_enqueue_script(
+      'rubydurian_main_js',
+      plugin_dir_url( __FILE__ ) . 'src/main.js',
+      array(),
+      filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
+      true
+    );
+  }
+}
+add_action('admin_enqueue_scripts', 'rubydurian_enqueue_admin');
 
 
 
@@ -83,7 +108,7 @@ function rt03register_menu() {
     'RubyDurian',
     'manage_options',
     'custompage',
-    'rubydurian_page_manage',
+    'rubydurian_page_manage_html',
     $icon_main_url,
     99
 );
@@ -92,7 +117,7 @@ function rt03register_menu() {
   // add_submenu_page( $menu_name, 'RubyTabs Hidden', 'Options', $capability, $menu_name .'-hidden', 'rt03page_hidden' );
 }
 
-function rubydurian_page_manage() {
+function rubydurian_page_manage_html() {
   require_once('admin/page-manage.php');
 }
 // function rt03page_hidden()  { require_once('admin/page-hidden.php'); }
@@ -116,7 +141,7 @@ function func_wp_vue() {
 
   $str= "<div id='app'>"
         ."Message from Vue: {{ message }}"
-        ."</div>";
+        ."</div>";  
   return $str;
 } // end function
 

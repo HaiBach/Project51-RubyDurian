@@ -1,3 +1,3 @@
-<section id="menu-page-durian">
-  <h2>Menu Durian</h2>
+<section id="rubydurian-app">
+  <h2>Main Page Ruby Durian</h2>
 </section>
