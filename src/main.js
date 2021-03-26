@@ -1,10 +1,8 @@
-// import { createApp } from 'vue'
+import { createApp } from 'vue'
 // import App from './App.vue'
+import './index.css'
 
-// createApp(App).mount('#app')
-// import './index.css'
-
-const app = Vue.createApp({
+const app = createApp({
   data() {
     return {
       message: 'Nguyen Van A'
@@ -13,3 +11,4 @@ const app = Vue.createApp({
 })
 app.mount('#app')
 console.log('foooo')
+console.log('boooo')

@@ -24,6 +24,22 @@ if( !defined('WPINC') ) die();
 if( defined('WP_INSTALLING') && WP_INSTALLING ) return;
 
 
+function get_hashed_file($filename) {
+  // $regex = '/\/[\w-]+\.[\w-]+.*/i';
+  $regex = '/[\w+]+\.[\w+]+\.\w+/i';
+  $fileWithHash = glob(dirname(__FILE__) . '\\dist\\assets\\' . $filename . '.*.js')[0];
+  preg_match($regex, $fileWithHash, $matches);
+  // echo '<pre>', var_dump(glob(dirname(__FILE__) . "\dist\\assets\\" . $filename . '.*.js')[0]), '</pre>';
+  // echo '<pre>', var_dump($matches[0]), '</pre>';
+  return $matches[0];
+}
+function get_hashed_file_css($filename) {
+  $regex = '/[\w+]+\.[\w+]+\.\w+/i';
+  $fileWithHash = glob(dirname(__FILE__) . '\\dist\\assets\\' . $filename . '.*.css')[0];
+  preg_match($regex, $fileWithHash, $matches);
+  return $matches[0];
+}
+
 function func_load_vuescripts() {
   // wp_register_script(
   //   'rubydurian_main_js',
@@ -57,7 +73,10 @@ function func_load_vuescripts() {
 add_action('wp_enqueue_scripts', 'func_load_vuescripts');
 
 function rubydurian_enqueue_admin($hook) {
-  if ($hook == 'toplevel_page_custompage') {
+  // $file = plugin_dir_url( __FILE__ ) . 'dist/assets' . get_hashed_file('index');
+  // echo '<pre>', var_dump($file), '</pre>';
+  
+  if ($hook === 'toplevel_page_rubydurian') {
     wp_enqueue_script(
       'rubydurian_vuejs_next',
       plugin_dir_url( __FILE__ ) . 'src/assets/vue-next.js',
@@ -65,16 +84,41 @@ function rubydurian_enqueue_admin($hook) {
       filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-next.js' ),
       false
     );
+    // wp_enqueue_script(
+    //   'rubydurian_main_js',
+    //   plugin_dir_url( __FILE__ ) . 'src/main.js',
+    //   array(),
+    //   filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
+    //   true
+    // );
     wp_enqueue_script(
       'rubydurian_main_js',
-      plugin_dir_url( __FILE__ ) . 'src/main.js',
+      plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('index'),
       array(),
-      filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
+      null,
+      true
+    );
+    wp_enqueue_script(
+      'rubydurian_vendor_js',
+      plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('vendor'),
+      array(),
+      null,
       true
     );
   }
 }
 add_action('admin_enqueue_scripts', 'rubydurian_enqueue_admin');
+
+
+/** Thêm attribute `module` trên thẻ `script` */
+function add_type_attribute($tag, $handle, $src) {
+  if ($handle === 'rubydurian_main_js') {
+    $tag = '<script type="module" src="' . esc_url($src) . '"></script>';
+    return $tag;
+  }
+  return $tag;
+}
+// add_filter('script_loader_tag', 'add_type_attribute', 10, 3);
 
 
 
@@ -107,11 +151,11 @@ function rt03register_menu() {
     __( 'Ruby Durian', 'rubydurian' ),
     'RubyDurian',
     'manage_options',
-    'custompage',
+    'rubydurian',
     'rubydurian_page_manage_html',
     $icon_main_url,
     99
-);
+  );
 
   // Menu Hidden
   // add_submenu_page( $menu_name, 'RubyTabs Hidden', 'Options', $capability, $menu_name .'-hidden', 'rt03page_hidden' );
