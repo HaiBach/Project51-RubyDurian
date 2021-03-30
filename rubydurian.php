@@ -85,6 +85,13 @@ function rubydurian_enqueue_admin($hook) {
       filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-next.js' ),
       false
     );
+    wp_enqueue_script(
+      'rubydurian_vue3_sfc_loader',
+      plugin_dir_url( __FILE__ ) . 'src/assets/vue3-sfc-loader.js',
+      array(),
+      filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue3-sfc-loader.js' ),
+      false
+    );
 
     wp_enqueue_script(
       'rubydurian_main_js',
