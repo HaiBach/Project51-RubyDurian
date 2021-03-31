@@ -128,6 +128,19 @@ function rubydurian_enqueue_admin($hook) {
 add_action('admin_enqueue_scripts', 'rubydurian_enqueue_admin');
 
 
+/* CHÈN BIẾN GLOBAL JAVASCRIPT */
+/* CHEN BIEN JAVASCRIPT CUSTOM TRUOC TINYMCE INIT */
+function rubydurian_add_custom_script($hook) {
+  ?>
+    <script type="text/javascript" class="rubydurian-script-value">
+      if( !window.rubydurianVA ) window.rubydurianVA = {};
+      window.rubydurianVA['urlPlugin'] = "<?php echo plugin_dir_url(__FILE__) ?>";
+    </script>
+  <?php
+}
+add_action('admin_enqueue_scripts', 'rubydurian_add_custom_script');
+
+
 /** Thêm attribute `module` trên thẻ `script` */
 function add_type_attribute($tag, $handle, $src) {
   if (
@@ -183,7 +196,7 @@ function rt03register_menu() {
 }
 
 function rubydurian_page_manage_html() {
-  require_once('pages/admin/page-manage.php');
+  require_once('src/pages/admin/page-manage.php');
 }
 // function rt03page_hidden()  { require_once('admin/page-hidden.php'); }
 
@@ -204,7 +217,7 @@ function func_wp_vue() {
   wp_enqueue_script('rubydurian_vuejs_next');
   wp_enqueue_script('rubydurian_main_js');
 
-  $str= "<div id='app'>"
+  $str= "<div id='rubydurian-app'>"
         ."Message from Vue: {{ message }}"
         ."</div>";  
   return $str;

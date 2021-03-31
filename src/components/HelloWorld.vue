@@ -14,13 +14,15 @@
 </template>
 
 <script setup>
-// import { defineProps, reactive } from 'vue'
+console.log('Hello World')
+import { defineProps, reactive } from 'vue'
 
-// defineProps({
-//   msg: String
-// })
+defineProps({
+  msg: String
+})
 
-// const state = reactive({ count: 0 })
+const state = reactive({ count: 0 })
+console.log('Hello World')
 </script>
 
 <style scoped>
