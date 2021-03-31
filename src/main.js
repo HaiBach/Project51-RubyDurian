@@ -2,12 +2,12 @@
 // import App from './App.vue'
 // import './index.css'
 
+/** IMPORT FILE */
 import helloworld from './components/helloworld.js'
-// import './components/HelloWorld.vue'
 
 /** ĐIỀU KIỆN THỰC HIỆN */
 const rubydurianVA = window['rubydurianVA']
-console.log(rubydurianVA)
+const urlPlugin = !!rubydurianVA ? rubydurianVA['urlPlugin'] : ''
 // if (!rubydurianVA) return null
 
 const options = {
@@ -15,9 +15,10 @@ const options = {
     vue: Vue
   },
   async getFile(url) {
-    const res = await fetch(url);
+    const fullURL = urlPlugin + url
+    const res = await fetch(fullURL);
     if ( !res.ok )
-      throw Object.assign(new Error(res.statusText + ' ' + url), { res });
+      throw Object.assign(new Error(res.statusText + ' ' + fullURL), { res });
     return await res.text();
   },
   addStyle(textContent) {
@@ -27,7 +28,8 @@ const options = {
   },
 }
 const { loadModule } = window['vue3-sfc-loader']
-const greeting = loadModule(rubydurianVA['urlPlugin'] + '/src/components/greeting.vue', options)
+const greeting = loadModule('/src/components/greeting.vue', options)
+const HelloWorld = loadModule('/src/components/HelloWorld.vue', options)
 
 
 /** CREATE NEW APP */
@@ -43,9 +45,9 @@ const app = Vue.createApp({
 /** APP COMPONENTS */
 app.component('hello', helloworld )
 app.component('greeting', Vue.defineAsyncComponent( () => greeting ))
+app.component('HelloWorld', Vue.defineAsyncComponent( () => HelloWorld ))
 
 
 /** APP MOUNT */
 app.mount('#rubydurian-app')
-// const foo = Vue.defineAsyncComponent( () => loadModule('./components/HelloWorld.vue', options) )
-console.log('foooo2')
+console.log('Create New App')

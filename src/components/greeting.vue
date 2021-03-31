@@ -3,6 +3,8 @@
 </template>
 
 <script>
+// import defaultExport from './helloworld.js'
+
 module.exports = {
   data() {
     return {

@@ -22,7 +22,6 @@ defineProps({
 })
 
 const state = reactive({ count: 0 })
-console.log('Hello World')
 </script>
 
 <style scoped>
