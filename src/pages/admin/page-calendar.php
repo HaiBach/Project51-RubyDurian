@@ -1,2 +1,1 @@
-<section id="rubydurian-app" class="">
-</section>
+<section id="rubydurian-app"></section>

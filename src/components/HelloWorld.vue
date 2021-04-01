@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-console.log('Hello World')
 import { defineProps, reactive } from 'vue'
 
 defineProps({

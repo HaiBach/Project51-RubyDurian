@@ -1,6 +1,5 @@
 <template>
-  <h1>HOME PAGE</h1>
-  <p class="du-bg-blue-600">{{ greeting }} World!</p>
+  <p class="du-bg-blue-600 du-text-white">{{ greeting }}</p>
 </template>
 
 <script>
@@ -9,7 +8,7 @@
 module.exports = {
   data() {
     return {
-      greeting: "Xin chào mọi người"
+      greeting: "Day la Navigation component"
     };
   }
 };
@@ -17,7 +16,7 @@ module.exports = {
 
 <style scoped>
 p {
-  font-size: 2em;
+  font-size: 4em;
   text-align: center;
 }
 </style>

@@ -87,7 +87,8 @@ function rubydurian_enqueue_admin($hook) {
   
   if (
     $hook === 'toplevel_page_rubydurian' ||
-    $hook === 'rubydurian_page_rubydurian-calendar'
+    $hook === 'rubydurian_page_rubydurian-calendar' ||
+    $hook === 'rubydurian_page_rubydurian-options'
     ) {
     wp_enqueue_script(
       'rubydurian_vuejs_next',
@@ -96,13 +97,13 @@ function rubydurian_enqueue_admin($hook) {
       filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-next.js' ),
       false
     );
-    // wp_enqueue_script(
-    //   'rubydurian_vue_router',
-    //   plugin_dir_url( __FILE__ ) . 'src/assets/vue-router.js',
-    //   array(),
-    //   filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-router.js' ),
-    //   false
-    // );
+    wp_enqueue_script(
+      'rubydurian_vue_router',
+      plugin_dir_url( __FILE__ ) . 'src/assets/vue-router.js',
+      array(),
+      filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-router.js' ),
+      false
+    );
     wp_enqueue_script(
       'rubydurian_vue3_sfc_loader',
       plugin_dir_url( __FILE__ ) . 'src/assets/vue3-sfc-loader.js',
@@ -199,13 +200,21 @@ function rubydurian_register_menu() {
   );
 
   // Submenu
-  add_submenu_page( 
+  add_submenu_page(
     'rubydurian',
-    __( 'Calendar | Ruby Durian', 'rubydurian' ),
+    __( 'Calendar', 'rubydurian' ),
     'Calendar',
     'manage_options',
     'rubydurian-calendar',
     'rubydurian_htmlpage_calendar'
+  );
+  add_submenu_page(
+    'rubydurian',
+    __( 'Options', 'rubydurian' ),
+    'Options',
+    'manage_options',
+    'rubydurian-options',
+    'rubydurian_htmlpage_options'
   );
 
   // Menu Hidden
@@ -216,7 +225,10 @@ function rubydurian_htmlpage_manage() {
   require_once('src/pages/admin/page-manage.php');
 }
 function rubydurian_htmlpage_calendar() {
-  require_once('src/pages/admin/page-calendar.php');
+  require_once('src/pages/admin/page.php');
+}
+function rubydurian_htmlpage_options() {
+  require_once('src/pages/admin/page.php');
 }
 // function rt03page_hidden()  { require_once('admin/page-hidden.php'); }
 

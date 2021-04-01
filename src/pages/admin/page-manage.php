@@ -5,5 +5,6 @@
   <!-- <HelloWorld></HelloWorld> -->
   <!-- <button-counter></button-counter> -->
 
-  <!-- <router-view></router-view> -->
+  <!-- Route Outlet -->
+  <router-view></router-view>
 </section>
