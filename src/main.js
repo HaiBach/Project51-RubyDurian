@@ -50,14 +50,18 @@ const NotFoundComponent = { template: '<p>Page not found</p>' }
 const HomeComponent = { template: '<p>Home page</p>' }
 const AboutComponent = { template: '<p>About page</p>' }
 
+// Lấy tham số `page` trên url
+const urlParams = new URLSearchParams(window.location.search)
+const paramPage = urlParams.get('page')
+
 const routes = {
-  '/wp-admin/admin.php': HomeComponent,
-  '/about': AboutComponent
+  'rubydurian': HomeComponent,
+  'rubydurian-calendar': AboutComponent
 }
 
 const SimpleRouter = {
   data: () => ({
-    currentRoute: window.location.pathname
+    currentRoute: paramPage
   }),
   computed: {
     CurrentComponent() {
