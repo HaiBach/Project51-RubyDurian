@@ -11,6 +11,21 @@ module.exports = {
     return {
       greeting: "Xin chào mọi người"
     };
+  },
+  computed: {
+    username() {
+      return this.$route.params.username
+    }
+  },
+  methods: {
+    goToDashboard() {
+      if (isAuthenticated) {
+        this.$router.push('/dashboard')
+      }
+      else {
+        this.$route.push('/login')
+      }
+    }
   }
 };
 </script>

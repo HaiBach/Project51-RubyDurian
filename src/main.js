@@ -4,6 +4,7 @@
 
 /** IMPORT FILE */
 import helloworld from './components/helloworld.js'
+// import routes from './routes.js'
 
 
 
@@ -48,11 +49,17 @@ const Home = loadModule('/src/components/Home.vue', options)
  */
 // const { createApp, h } = Vue
 
-const NotFoundComponent = { template: '<p>Page not found</p>' }
+// const NotFoundComponent = { template: '<p>Page not found</p>' }
 // const HomeComponent = { template: '<p>Home page</p>' }
-const HomeComponent = Vue.defineAsyncComponent(() => Home)
-const CalendarComponent = { template: '<p>Calendar page</p>' }
-const OptionsComponent = { template: '<p>Options page</p>' }
+// const HomeComponent = Vue.defineAsyncComponent(() => Home)
+// const CalendarComponent = { template: '<p>Calendar page</p>' }
+// const OptionsComponent = { template: '<p>Options page</p>' }
+
+const components = {
+  HomeComponent: Vue.defineAsyncComponent(() => Home),
+  CalendarComponent:{ template: '<h2 style="font-size: 4em">Calendar page</h2>' },
+  OptionsComponent: { template: '<h2 style="font-size: 4em">Options page</h2>' },
+}
 
 
 
@@ -61,22 +68,36 @@ const OptionsComponent = { template: '<p>Options page</p>' }
 /**
  * ROUTES
  */
+import routesJSON from './routes.js'
+const routes = routesJSON.map(route => (
+  {
+    name: route['name'],
+    path: route['path'],
+    component: components[ route['component'] ]
+  }
+))
 // Lấy tham số `page` trên url
-const urlParams = new URLSearchParams(window.location.search)
-const paramPage = urlParams.get('page')
+// const urlParams = new URLSearchParams(window.location.search)
+// const paramPage = urlParams.get('page')
 
 // const routes = {
 //   'rubydurian': HomeComponent,
 //   'rubydurian-calendar': CalendarComponent,
 //   'rubydurian-options': OptionsComponent
 // }
-const routes = [
-  { path: '/', component: HomeComponent },
-  { path: '/rubydurian-calendar', component: CalendarComponent },
-  { path: '/?page=rubydurian-calendar', component: CalendarComponent },
-  { path: '/admin.php?page=rubydurian-calendar', component: CalendarComponent },
-  { path: '/wp-admin/admin.php?page=rubydurian-calendar', component: CalendarComponent },
-]
+// const routes = [
+//   { path: "/admin.php", name: 'home', query: { page: 'rubydurian'}, component: HomeComponent },
+//   { path: "/admin.php", name: 'calendar', query: { page: 'rubydurian-calendar'}, component: CalendarComponent },
+//   { path: "/admin.php", name: 'options', query: { page: 'rubydurian-options'}, component: OptionsComponent },
+
+//   // { query: { page: 'rubydurian' }, component: HomeComponent },
+//   // { query: { page: 'rubydurian-calendar' }, component: CalendarComponent },
+//   // { query: { page: 'rubydurian-options' }, component: OptionsComponent },
+//   // { href: '/wp-admin/admin.php?page=rubydurian', component: HomeComponent },
+//   // { href: '/wp-admin/admin.php?page=rubydurian-calendar', component: CalendarComponent },
+//   // { href: '/wp-admin/admin.php?page=rubydurian-options', component: OptionsComponent },
+// ]
+
 
 
 
@@ -86,10 +107,24 @@ const routes = [
  * ROUTER
  */
 const router = VueRouter.createRouter({
-  history: VueRouter.createWebHashHistory(),
+  history: VueRouter.createWebHistory('/wp-admin/'),
   routes
 })
-console.log(router.currentRoute)
+
+// Hàm chuyển đổi route
+// Kiểm query param `page`
+// Chuyển thành route có dạng `next({ name: 'Calendar' })`
+router.beforeEach((to, from, next) => {
+  const fullname = to.query.page
+  const names = !!fullname ? fullname.split('-') : []
+
+  if ( names.length > 1 ) {
+    const lastname = names[1]
+    const nameCapitalize = lastname.charAt(0).toUpperCase() + lastname.slice(1)
+    next({ name: nameCapitalize })
+  }
+  else next()
+})
 
 
 
