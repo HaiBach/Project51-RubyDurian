@@ -1,17 +1,11 @@
 <template>
-  <nav>
-    Navigation
-    <Navigation />
-  </nav>
-  <main>
-    <header>
-      <h1>HOME PAGE</h1>
-      Header
-    </header>
-    <div id="rubydurian-maincontent">
-      Main Content
-    </div>    
-  </main>
+  <header>
+    <h1>HOME PAGE</h1>
+    Header
+  </header>
+  <div id="rubydurian-maincontent">
+    Main Content
+  </div>
 </template>
 
 

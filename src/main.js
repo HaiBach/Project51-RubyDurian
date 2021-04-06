@@ -41,6 +41,7 @@ const options = {
 }
 const { loadModule } = window['vue3-sfc-loader']
 const Home = loadModule('/src/components/Home.vue', options)
+const Navigation = loadModule('/src/components/Navigation.vue', options)
 
 
 
@@ -59,7 +60,7 @@ const Home = loadModule('/src/components/Home.vue', options)
 
 const components = {
   HomeComponent: () => Home,
-  CalendarComponent:{ template: '<h2 style="font-size: 4em">Calendar page</h2>' },
+  CalendarComponent: { template: '<h2 style="font-size: 4em">Calendar page</h2>' },
   OptionsComponent: { template: '<h2 style="font-size: 4em">Options page</h2>' },
 }
 
@@ -116,5 +117,6 @@ router.beforeEach((to, from, next) => {
  */
 const app = Vue.createApp({})
 app.use(router)
+// app.component({ Navigation })
 app.mount('#rubydurian-app')
 console.log('Finish Create New App')

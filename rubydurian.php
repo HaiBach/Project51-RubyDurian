@@ -194,7 +194,7 @@ function rubydurian_register_menu() {
     'RubyDurian',
     'manage_options',
     'rubydurian',
-    'rubydurian_htmlpage_manage',
+    'rubydurian_htmlpage_home',
     $icon_main_url,
     99
   );
@@ -221,8 +221,9 @@ function rubydurian_register_menu() {
   // add_submenu_page( $menu_name, 'RubyTabs Hidden', 'Options', $capability, $menu_name .'-hidden', 'rt03page_hidden' );
 }
 
-function rubydurian_htmlpage_manage() {
-  require_once('src/pages/admin/page-manage.php');
+function rubydurian_htmlpage_home() {
+  // require_once('src/pages/admin/page-home.php');
+  require_once('src/pages/admin/page.php');
 }
 function rubydurian_htmlpage_calendar() {
   require_once('src/pages/admin/page.php');
