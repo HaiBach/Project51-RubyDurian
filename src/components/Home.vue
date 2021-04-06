@@ -1,7 +1,7 @@
 <template>
   <nav>
     Navigation
-    <Navigation></Navigation>
+    <Navigation />
   </nav>
   <main>
     <header>
@@ -14,44 +14,25 @@
   </main>
 </template>
 
+
 <script>
-// import defaultExport from './helloworld.js'
+/** IMPORT */
 import Navigation from './Navigation.vue'
 
 
-// const rubydurianVA = window['rubydurianVA']
-// const urlPlugin = !!rubydurianVA ? rubydurianVA['urlPlugin'] : ''
-// // if (!rubydurianVA) return null
-
-// const options = {
-//   moduleCache: {
-//     vue: Vue
-//   },
-//   async getFile(url) {
-//     const fullURL = urlPlugin + url
-//     const res = await fetch(fullURL);
-//     if ( !res.ok )
-//       throw Object.assign(new Error(res.statusText + ' ' + fullURL), { res });
-//     return await res.text();
-//   },
-//   addStyle(textContent) {
-//     const style = Object.assign(document.createElement('style'), { textContent });
-//     const ref = document.head.getElementsByTagName('style')[0] || null;
-//     document.head.insertBefore(style, ref);
-//   },
-// }
-
-// const { loadModule } = window['vue3-sfc-loader']
-// const Navigation = loadModule('/Navigation.vue', options)
-
+/** EXPORT */
 module.exports = {
   data() {
     return {
       greeting: "Xin chào mọi người"
     };
-  }
+  },
+  components: {
+    Navigation,
+  },
 };
 </script>
+
 
 <style scoped>
 p {
