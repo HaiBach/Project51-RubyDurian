@@ -4,7 +4,10 @@
 
 /** IMPORT FILE */
 import helloworld from './components/helloworld.js'
-// import routes from './routes.js'
+
+// Lấy tham số `page` trên url
+// const urlParams = new URLSearchParams(window.location.search)
+// const paramPage = urlParams.get('page')
 
 
 
@@ -56,7 +59,7 @@ const Home = loadModule('/src/components/Home.vue', options)
 // const OptionsComponent = { template: '<p>Options page</p>' }
 
 const components = {
-  HomeComponent: Vue.defineAsyncComponent(() => Home),
+  HomeComponent: () => Home,
   CalendarComponent:{ template: '<h2 style="font-size: 4em">Calendar page</h2>' },
   OptionsComponent: { template: '<h2 style="font-size: 4em">Options page</h2>' },
 }
@@ -67,6 +70,7 @@ const components = {
 
 /**
  * ROUTES
+ * Chuyển đổi string component thành đối tượng component
  */
 import routesJSON from './routes.js'
 const routes = routesJSON.map(route => (
@@ -76,28 +80,6 @@ const routes = routesJSON.map(route => (
     component: components[ route['component'] ]
   }
 ))
-// Lấy tham số `page` trên url
-// const urlParams = new URLSearchParams(window.location.search)
-// const paramPage = urlParams.get('page')
-
-// const routes = {
-//   'rubydurian': HomeComponent,
-//   'rubydurian-calendar': CalendarComponent,
-//   'rubydurian-options': OptionsComponent
-// }
-// const routes = [
-//   { path: "/admin.php", name: 'home', query: { page: 'rubydurian'}, component: HomeComponent },
-//   { path: "/admin.php", name: 'calendar', query: { page: 'rubydurian-calendar'}, component: CalendarComponent },
-//   { path: "/admin.php", name: 'options', query: { page: 'rubydurian-options'}, component: OptionsComponent },
-
-//   // { query: { page: 'rubydurian' }, component: HomeComponent },
-//   // { query: { page: 'rubydurian-calendar' }, component: CalendarComponent },
-//   // { query: { page: 'rubydurian-options' }, component: OptionsComponent },
-//   // { href: '/wp-admin/admin.php?page=rubydurian', component: HomeComponent },
-//   // { href: '/wp-admin/admin.php?page=rubydurian-calendar', component: CalendarComponent },
-//   // { href: '/wp-admin/admin.php?page=rubydurian-options', component: OptionsComponent },
-// ]
-
 
 
 
@@ -133,43 +115,7 @@ router.beforeEach((to, from, next) => {
 /**
  * CREATE NEW APP
  */
-// const SimpleRouter = {
-//   data: () => ({
-//     currentRoute: paramPage
-//   }),
-//   computed: {
-//     CurrentComponent() {
-//       return routes[this.currentRoute] || NotFoundComponent
-//     }
-//   },
-//   render() {
-//     return Vue.h(this.CurrentComponent)
-//   }
-// }
-
-// const app = Vue.createApp(SimpleRouter)
-// app.mount('#rubydurian-app')
 const app = Vue.createApp({})
 app.use(router)
 app.mount('#rubydurian-app')
-
-
-/** CREATE NEW APP */
-// const app = Vue.createApp({
-//   data() {
-//     return {
-//       message: 'Nguyen Van A'
-//     }
-//   }
-// })
-// const app = Vue.createApp({ router })
-
-
-/** APP COMPONENTS */
-// app.component('hello', helloworld )
-// app.component('greeting', Vue.defineAsyncComponent( () => greeting ))
-
-
-/** APP MOUNT */
-// app.mount('#rubydurian-app')
-console.log('Create New App')
+console.log('Finish Create New App')
