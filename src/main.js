@@ -40,8 +40,7 @@ const options = {
   },
 }
 const { loadModule } = window['vue3-sfc-loader']
-const Home = loadModule('/src/components/Home.vue', options)
-const Navigation = loadModule('/src/components/Navigation.vue', options)
+const Dashboard = loadModule('/src/components/Dashboard.vue', options)
 
 
 
@@ -52,15 +51,12 @@ const Navigation = loadModule('/src/components/Navigation.vue', options)
  */
 // const { createApp, h } = Vue
 
-// const NotFoundComponent = { template: '<p>Page not found</p>' }
-// const HomeComponent = { template: '<p>Home page</p>' }
-// const HomeComponent = Vue.defineAsyncComponent(() => Home)
-// const CalendarComponent = { template: '<p>Calendar page</p>' }
-// const OptionsComponent = { template: '<p>Options page</p>' }
-
 const components = {
-  HomeComponent: () => Home,
+  DashboardComponent: () => Dashboard,
   CalendarComponent: { template: '<h2 style="font-size: 4em">Calendar page</h2>' },
+  CustomersComponent: { template: '<h2 style="font-size: 4em">Customers page</h2>' },
+  StaffsComponent: { template: '<h2 style="font-size: 4em">Staffs page</h2>' },
+  ServicesComponent: { template: '<h2 style="font-size: 4em">Services page</h2>' },
   OptionsComponent: { template: '<h2 style="font-size: 4em">Options page</h2>' },
 }
 
