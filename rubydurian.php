@@ -22,6 +22,7 @@
  */
 if( !defined('WPINC') ) die();
 if( defined('WP_INSTALLING') && WP_INSTALLING ) return;
+define('RUBYDURIAN_URL', plugin_dir_url( __FILE__ ));
 
 
 
