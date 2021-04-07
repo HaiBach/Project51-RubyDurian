@@ -81,7 +81,7 @@ function rubydurian_load_vuescripts() {
 add_action('wp_enqueue_scripts', 'rubydurian_load_vuescripts');
 
 function rubydurian_enqueue_admin($hook) {
-  
+
   // $hook === 'toplevel_page_rubydurian'
   // $hook === 'rubydurian_page_rubydurian-calendar'
   // $hook === 'rubydurian_page_rubydurian-customers'
@@ -249,9 +249,6 @@ function rubydurian_htmlpage_home() {
   require_once('src/pages/admin/page.php');
 }
 function rubydurian_htmlpage_page_default() {
-  require_once('src/pages/admin/page.php');
-}
-function rubydurian_htmlpage_calendar() {
   require_once('src/pages/admin/page.php');
 }
 add_action('admin_menu', 'rubydurian_register_menu');

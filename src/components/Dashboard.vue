@@ -1,7 +1,6 @@
 <template>
   <header>
-    <h1>HOME PAGE</h1>
-    Header
+    <h1>DASHBOARD</h1>
   </header>
   <div id="rubydurian-maincontent">
     Main Content
