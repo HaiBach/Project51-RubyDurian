@@ -87,6 +87,7 @@ const routes = routesJSON.map(route => (
  */
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory('/wp-admin/'),
+  // history: VueRouter.createWebHistory(),
   routes,
   linkActiveClass: 'du-active'
 })

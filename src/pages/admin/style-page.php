@@ -44,24 +44,4 @@
   #wpbody-content {
     padding-bottom: 42px;
   }
-
-
-
-
-
-  /** RubyDurian Navigation */
-  #rubydurian-nav li {
-    display: block;
-    margin-bottom: 0;
-  }
-  .du-nav__link {
-    display: block;
-    padding: 15px 10px;
-    margin: 10px;
-    text-align: center;
-    border-radius: 6px;
-    color: #999;
-    font-size: 1.6rem;
-    line-height: 1;
-  }
 </style>

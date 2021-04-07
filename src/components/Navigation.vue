@@ -7,35 +7,21 @@
         </router-link>
       </div>
       <ul class="du-flex du-flex-col">
-        <li>
-          <router-link to="/admin.php?page=rubydurian" class="du-nav__link">
-            <i class="du-icon-home"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/admin.php?page=rubydurian-calendar" class="du-nav__link">
-            <i class="du-icon-calendar"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/admin.php?page=rubydurian-customers" class="du-nav__link">
-            <i class="du-icon-people"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/admin.php?page=rubydurian-staffs" class="du-nav__link">
-            <i class="du-icon-badge"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/admin.php?page=rubydurian-services" class="du-nav__link">
-            <i class="du-icon-checklist"></i>
+        <li
+          v-for="route in navTop"
+          :key="route.name"
+          class="du-block du-mb-0"
+          >
+          <router-link :to="{ name: route.name }"
+            class="du-nav__link du-block du-p-2.5 du-m-2.5 du-rounded-md du-text-gray-500 du-text-2xl du-text-center hover:du-text-black focus:du-shadow-none">
+            <i :class="route.icon"></i>
           </router-link>
         </li>
       </ul>
     </div>
     <div class="du-nav__bottom">
-      <router-link to="/admin.php?page=rubydurian-options" class="du-nav__link">
+      <router-link :to="{ name: 'Options' }"
+        class="du-nav__link du-block du-p-2.5 du-m-2.5 du-rounded-md du-text-gray-500 du-text-2xl du-text-center hover:du-text-black focus:du-shadow-none">
         <i class="du-icon-gear"></i>
       </router-link>
     </div>
@@ -48,18 +34,16 @@ module.exports = {
   data() {
     return {
       urlPlugin: window.rubydurianVA.urlPlugin,
-      navigation: {
-        top: [
-          { name: 'Dashboard', icon: 'du-icon-home' },
-          { name: 'Calendar', icon: 'du-icon-calendar' },
-          { name: 'Customers', icon: 'du-icon-people' },
-          { name: 'Staffs', icon: 'du-icon-badge' },
-          { name: 'Services', icon: 'du-icon-checklist' },
-        ],
-        bottom: [
-          { name: 'Options', icon: 'du-icon-gear' },
-        ]
-      }
+      navTop: [
+        { name: 'Dashboard', icon: 'du-icon-home' },
+        { name: 'Calendar', icon: 'du-icon-calendar' },
+        { name: 'Customers', icon: 'du-icon-people' },
+        { name: 'Staffs', icon: 'du-icon-badge' },
+        { name: 'Services', icon: 'du-icon-checklist' },
+      ],
+      navBottom: [
+        { name: 'Options', icon: 'du-icon-gear' },
+      ]
     }
   }
 }
@@ -67,4 +51,8 @@ module.exports = {
 
 
 <style scoped>
+  .du-nav__link.du-active {
+    background-color: #DADADA;
+    color: #000;
+  }
 </style>
