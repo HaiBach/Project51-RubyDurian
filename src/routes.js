@@ -2,34 +2,39 @@
  * ROUTES
  */
 export default [
+  // {
+  //   name: 'Dashboard',
+  //   path: "/admin.php",
+  //   component: 'Dashboard'
+  // },
   {
     name: 'Dashboard',
-    path: "/admin.php",
-    component: 'DashboardComponent'
+    path: "/admin.php?page=rubydurian",
+    component: 'Dashboard'
   },
   {
     name: 'Calendar',
     path: "/admin.php?page=rubydurian-calendar",
-    component: 'CalendarComponent'
+    component: 'Calendar'
   },
   {
     name: 'Customers',
     path: "/admin.php?page=rubydurian-customers",
-    component: 'CustomersComponent'
+    component: 'Customers'
   },
   {
     name: 'Staffs',
     path: "/admin.php?page=rubydurian-staffs",
-    component: 'StaffsComponent'
+    component: 'Staffs'
   },
   {
     name: 'Services',
     path: "/admin.php?page=rubydurian-services",
-    component: 'ServicesComponent'
+    component: 'Services'
   },
   {
     name: 'Options',
     path: "/admin.php?page=rubydurian-options",
-    component: 'OptionsComponent'
+    component: 'Options'
   },
 ]

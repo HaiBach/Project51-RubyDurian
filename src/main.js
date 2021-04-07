@@ -41,6 +41,7 @@ const options = {
 }
 const { loadModule } = window['vue3-sfc-loader']
 const Dashboard = loadModule('/src/components/Dashboard.vue', options)
+const Navigation = loadModule('/src/components/Navigation.vue', options)
 
 
 
@@ -52,12 +53,12 @@ const Dashboard = loadModule('/src/components/Dashboard.vue', options)
 // const { createApp, h } = Vue
 
 const components = {
-  DashboardComponent: () => Dashboard,
-  CalendarComponent: { template: '<h2 style="font-size: 4em">Calendar page</h2>' },
-  CustomersComponent: { template: '<h2 style="font-size: 4em">Customers page</h2>' },
-  StaffsComponent: { template: '<h2 style="font-size: 4em">Staffs page</h2>' },
-  ServicesComponent: { template: '<h2 style="font-size: 4em">Services page</h2>' },
-  OptionsComponent: { template: '<h2 style="font-size: 4em">Options page</h2>' },
+  Dashboard: () => Dashboard,
+  Calendar: { template: '<h2 style="font-size: 4em">Calendar page</h2>' },
+  Customers: { template: '<h2 style="font-size: 4em">Customers page</h2>' },
+  Staffs: { template: '<h2 style="font-size: 4em">Staffs page</h2>' },
+  Services: { template: '<h2 style="font-size: 4em">Services page</h2>' },
+  Options: { template: '<h2 style="font-size: 4em">Options page</h2>' },
 }
 
 
@@ -86,7 +87,8 @@ const routes = routesJSON.map(route => (
  */
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory('/wp-admin/'),
-  routes
+  routes,
+  linkActiveClass: 'du-active'
 })
 
 // Hàm chuyển đổi route
@@ -101,6 +103,9 @@ router.beforeEach((to, from, next) => {
     const nameCapitalize = lastname.charAt(0).toUpperCase() + lastname.slice(1)
     next({ name: nameCapitalize })
   }
+  else if (names.length === 1) {
+    next({ name: 'Dashboard' })
+  }
   else next()
 })
 
@@ -111,8 +116,29 @@ router.beforeEach((to, from, next) => {
 /**
  * CREATE NEW APP
  */
-const app = Vue.createApp({})
+const App = {
+  // data() {
+  //   return {
+  //     navigation: {
+  //       top: [
+  //         { name: 'Dashboard', icon: 'du-icon-home' },
+  //         { name: 'Calendar', icon: 'du-icon-calendar' },
+  //         { name: 'Customers', icon: 'du-icon-people' },
+  //         { name: 'Staffs', icon: 'du-icon-badge' },
+  //         { name: 'Services', icon: 'du-icon-checklist' },
+  //       ],
+  //       bottom: [
+  //         { name: 'Options', icon: 'du-icon-gear' },
+  //       ]
+  //     }
+  //   }
+  // }
+  components: {
+    Navigation: () => Navigation
+  }
+}
+const app = Vue.createApp(App)
+// app.component('Navigation', Navigation )
 app.use(router)
-// app.component({ Navigation })
 app.mount('#rubydurian-app')
 console.log('Finish Create New App')
