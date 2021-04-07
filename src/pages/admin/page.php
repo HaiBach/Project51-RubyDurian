@@ -1,7 +1,6 @@
 <section id="rubydurian-app" class="du-flex">
   <!-- Navigation -->
-  <?php require_once('navigation.php') ?>
-  <!-- <Navigation /> -->
+  <Navigation></Navigation>
 
   <!-- Main -->
   <main id="rubydurian-main" class="du-bg-white du-flex-1">

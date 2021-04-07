@@ -134,11 +134,11 @@ const App = {
   //   }
   // }
   components: {
-    Navigation: () => Navigation
+    Navigation: Vue.defineAsyncComponent( () => Navigation ),
+    // Dashboard: Vue.defineAsyncComponent( () => Dashboard ),
   }
 }
 const app = Vue.createApp(App)
-// app.component('Navigation', Navigation )
 app.use(router)
 app.mount('#rubydurian-app')
 console.log('Finish Create New App')

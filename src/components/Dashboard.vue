@@ -10,7 +10,7 @@
 
 <script>
 /** IMPORT */
-import Navigation from './Navigation.vue'
+// import Navigation from './Navigation.vue'
 
 
 /** EXPORT */
@@ -21,7 +21,7 @@ module.exports = {
     };
   },
   components: {
-    Navigation,
+    // Navigation,
   },
 };
 </script>
