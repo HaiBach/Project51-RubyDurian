@@ -54,7 +54,7 @@ const Navigation = loadModule('/src/components/Navigation.vue', options)
 
 const components = {
   Dashboard: () => Dashboard,
-  Calendar: { template: '<h2 style="font-size: 4em">Calendar page</h2>' },
+  Booking: { template: '<h2 style="font-size: 4em">Booking page</h2>' },
   Customers: { template: '<h2 style="font-size: 4em">Customers page</h2>' },
   Staffs: { template: '<h2 style="font-size: 4em">Staffs page</h2>' },
   Services: { template: '<h2 style="font-size: 4em">Services page</h2>' },
@@ -94,7 +94,7 @@ const router = VueRouter.createRouter({
 
 // Hàm chuyển đổi route
 // Kiểm query param `page`
-// Chuyển thành route có dạng `next({ name: 'Calendar' })`
+// Chuyển thành route có dạng `next({ name: 'Booking' })`
 router.beforeEach((to, from, next) => {
   const fullname = to.query.page
   const names = !!fullname ? fullname.split('-') : []
@@ -123,7 +123,7 @@ const App = {
   //     navigation: {
   //       top: [
   //         { name: 'Dashboard', icon: 'du-icon-home' },
-  //         { name: 'Calendar', icon: 'du-icon-calendar' },
+  //         { name: 'Booking', icon: 'du-icon-booking' },
   //         { name: 'Customers', icon: 'du-icon-people' },
   //         { name: 'Staffs', icon: 'du-icon-badge' },
   //         { name: 'Services', icon: 'du-icon-checklist' },

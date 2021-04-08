@@ -36,7 +36,7 @@ module.exports = {
       urlPlugin: window.rubydurianVA.urlPlugin,
       navTop: [
         { name: 'Dashboard', icon: 'du-icon-home' },
-        { name: 'Calendar', icon: 'du-icon-calendar' },
+        { name: 'Booking', icon: 'du-icon-calendar' },
         { name: 'Customers', icon: 'du-icon-people' },
         { name: 'Staffs', icon: 'du-icon-badge' },
         { name: 'Services', icon: 'du-icon-checklist' },

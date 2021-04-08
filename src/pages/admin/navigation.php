@@ -12,8 +12,8 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/admin.php?page=rubydurian-calendar" class="du-nav__link">
-          <i class="du-icon-calendar"></i>
+        <router-link to="/admin.php?page=rubydurian-booking" class="du-nav__link">
+          <i class="du-icon-booking"></i>
         </router-link>
       </li>
       <li>

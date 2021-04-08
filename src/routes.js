@@ -13,9 +13,9 @@ export default [
     component: 'Dashboard'
   },
   {
-    name: 'Calendar',
-    path: "/admin.php?page=rubydurian-calendar",
-    component: 'Calendar'
+    name: 'Booking',
+    path: "/admin.php?page=rubydurian-booking",
+    component: 'Booking'
   },
   {
     name: 'Customers',

@@ -84,7 +84,7 @@ add_action('wp_enqueue_scripts', 'rubydurian_load_vuescripts');
 function rubydurian_enqueue_admin($hook) {
 
   // $hook === 'toplevel_page_rubydurian'
-  // $hook === 'rubydurian_page_rubydurian-calendar'
+  // $hook === 'rubydurian_page_rubydurian-booking'
   // $hook === 'rubydurian_page_rubydurian-customers'
   // $hook === 'rubydurian_page_rubydurian-staffs'
   // $hook === 'rubydurian_page_rubydurian-services'
@@ -203,10 +203,10 @@ function rubydurian_register_menu() {
   // Submenu
   add_submenu_page(
     'rubydurian',
-    __( 'Calendar', 'rubydurian' ),
-    'Calendar',
+    __( 'Booking', 'rubydurian' ),
+    'Booking',
     'manage_options',
-    'rubydurian-calendar',
+    'rubydurian-booking',
     'rubydurian_htmlpage_page_default'
   );
   add_submenu_page(
