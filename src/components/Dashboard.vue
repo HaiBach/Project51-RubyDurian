@@ -1,27 +1,28 @@
 <template>
-  <header>
-    <h1>DASHBOARD</h1>
-  </header>
-  <div id="rubydurian-maincontent">
-    Main Content
+  <!-- HEADER -->
+  <Header :title="title"></Header>
+
+  <div id="rubydurian-maincontent" class="du-p-2.5">
+    Dashboard Content
   </div>
 </template>
 
 
 <script>
 /** IMPORT */
-// import Navigation from './Navigation.vue'
+import Header from './Header.vue'
 
 
 /** EXPORT */
 module.exports = {
   data() {
     return {
-      greeting: "Xin chào mọi người"
-    };
+      title: 'Dashboard',
+
+    }
   },
   components: {
-    // Navigation,
+    Header,
   },
 };
 </script>
