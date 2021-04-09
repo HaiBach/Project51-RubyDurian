@@ -1,3 +1,9 @@
+.du-icon-person:before {
+  content: "\e906";
+}
+.du-icon-bell:before {
+  content: "\e907";
+}
 .du-icon-gear:before {
   content: "\e901";
 }

@@ -26,7 +26,7 @@ import Header from './Header.vue'
 module.exports = {
   data() {
     return {
-      title: 'Dashboard',
+      title: 'Booking',
       list: [
         { key: 0, text: 'The block is currently under construction' },
         { key: 1, text: 'The block is currently under construction' },

@@ -3,7 +3,7 @@
 // import './index.css'
 
 /** IMPORT FILE */
-import helloworld from './components/helloworld.js'
+// import helloworld from './components/helloworld.js'
 
 // Lấy tham số `page` trên url
 // const urlParams = new URLSearchParams(window.location.search)
