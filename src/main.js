@@ -1,6 +1,5 @@
 // import { createApp } from 'vue'
 // import App from './App.vue'
-// import './index.css'
 
 /** IMPORT FILE */
 // import helloworld from './components/helloworld.js'
@@ -29,8 +28,9 @@ const options = {
   async getFile(url) {
     const fullURL = urlPlugin + url
     const res = await fetch(fullURL)
-    if ( !res.ok )
+    if ( !res.ok ) {
       throw Object.assign(new Error(res.statusText + ' ' + fullURL), { res })
+    }
     return await res.text();
   },
   addStyle(textContent) {
@@ -40,8 +40,10 @@ const options = {
   },
 }
 const { loadModule } = window['vue3-sfc-loader']
-const Dashboard = loadModule('/src/components/Dashboard.vue', options)
 const Navigation = loadModule('/src/components/Navigation.vue', options)
+const Dashboard = loadModule('/src/components/Dashboard.vue', options)
+const Booking = loadModule('/src/components/Booking.vue', options)
+
 
 
 
@@ -54,7 +56,7 @@ const Navigation = loadModule('/src/components/Navigation.vue', options)
 
 const components = {
   Dashboard: () => Dashboard,
-  Booking: { template: '<h2 style="font-size: 4em">Booking page</h2>' },
+  Booking: () => Booking,
   Customers: { template: '<h2 style="font-size: 4em">Customers page</h2>' },
   Staffs: { template: '<h2 style="font-size: 4em">Staffs page</h2>' },
   Services: { template: '<h2 style="font-size: 4em">Services page</h2>' },
@@ -87,7 +89,6 @@ const routes = routesJSON.map(route => (
  */
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory('/wp-admin/'),
-  // history: VueRouter.createWebHistory(),
   routes,
   linkActiveClass: 'du-active'
 })
@@ -120,24 +121,19 @@ router.beforeEach((to, from, next) => {
 const App = {
   // data() {
   //   return {
-  //     navigation: {
-  //       top: [
-  //         { name: 'Dashboard', icon: 'du-icon-home' },
-  //         { name: 'Booking', icon: 'du-icon-booking' },
-  //         { name: 'Customers', icon: 'du-icon-people' },
-  //         { name: 'Staffs', icon: 'du-icon-badge' },
-  //         { name: 'Services', icon: 'du-icon-checklist' },
-  //       ],
-  //       bottom: [
-  //         { name: 'Options', icon: 'du-icon-gear' },
-  //       ]
-  //     }
+  //     title: ''
   //   }
-  // }
+  // },
   components: {
     Navigation: Vue.defineAsyncComponent( () => Navigation ),
-    // Dashboard: Vue.defineAsyncComponent( () => Dashboard ),
-  }
+    // 'DuNavigation': Vue.defineAsyncComponent( () => Navigation ),
+    // MyHeader: { template: '<h2 style="font-size: 4em">Header</h2>' },
+  },
+  // methods: {
+    // currentRouteName() {
+    //   console.log('current route name')
+    // }
+  // }
 }
 const app = Vue.createApp(App)
 app.use(router)

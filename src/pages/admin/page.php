@@ -1,5 +1,4 @@
 <section id="rubydurian-app" class="du-flex">
-  <!-- Navigation -->
   <Navigation></Navigation>
 
   <!-- Main -->

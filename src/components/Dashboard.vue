@@ -2,7 +2,7 @@
   <!-- HEADER -->
   <Header :title="title"></Header>
 
-  <div id="rubydurian-maincontent" class="du-p-2.5">
+  <!-- <div id="rubydurian-maincontent" class="du-p-2.5"> -->
     <ul class="du-flex du-flex-wrap du-p-10 du--mx-2.5">
       <li
         v-for="item in list"
@@ -13,7 +13,7 @@
         </div>
       </li>
     </ul>
-  </div>
+  <!-- </div> -->
 </template>
 
 

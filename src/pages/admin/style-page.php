@@ -36,12 +36,12 @@
   #rubydurian-app {
     margin-left: -20px;
     width: calc(100% + 20px);
-    min-height: calc(100vh - 40px - 34px);
+    min-height: calc(100vh - 44px - 32px);
   }
   #rubydurian-app img {
     border: none;
   }
   #wpbody-content {
-    padding-bottom: 42px;
+    padding-bottom: 44px;
   }
 </style>
