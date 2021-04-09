@@ -63,4 +63,7 @@ module.exports = {
   #du-form__store:focus {
     box-shadow: none;
   }
+  #du-form__store option {
+    background-color: #fff;
+  }
 </style>

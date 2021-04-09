@@ -33,95 +33,106 @@
         </div>
         <div id="du-week__right" :style="bgPattern">
           <div class="du-week__day du-week__mon">
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
+            <div class="du-week__hour du-week__hour_08"></div>
+            <div class="du-week__hour du-week__hour_09"></div>
+            <div class="du-week__hour du-week__hour_10"></div>
+            <div class="du-week__hour du-week__hour_11"></div>
+            <div class="du-week__hour du-week__hour_12"></div>
+            <div class="du-week__hour du-week__hour_13"></div>
+            <div class="du-week__hour du-week__hour_14"></div>
+            <div class="du-week__hour du-week__hour_15"></div>
+            <div class="du-week__hour du-week__hour_16"></div>
+            <div class="du-week__hour du-week__hour_17"></div>
+            <div class="du-week__hour du-week__hour_18"></div>
           </div>
           <div class="du-week__day du-week__tue">
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
+            <div class="du-week__hour du-week__hour_08"></div>
+            <div class="du-week__hour du-week__hour_09">
+              <div class="du-bookitems">
+                <div class="du-bookitem du-bookitem__05h"></div>
+                <div class="du-bookitem du-bookitem__1h"></div>
+                <div class="du-bookitem du-bookitem__2h"></div>
+              </div>
+            </div>
+            <div class="du-week__hour du-week__hour_10"></div>
+            <div class="du-week__hour du-week__hour_11"></div>
+            <div class="du-week__hour du-week__hour_12"></div>
+            <div class="du-week__hour du-week__hour_13"></div>
+            <div class="du-week__hour du-week__hour_14"></div>
+            <div class="du-week__hour du-week__hour_15"></div>
+            <div class="du-week__hour du-week__hour_16"></div>
+            <div class="du-week__hour du-week__hour_17"></div>
+            <div class="du-week__hour du-week__hour_18"></div>
           </div>
           <div class="du-week__day du-week__wed">
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
+            <div class="du-week__hour du-week__hour_08"></div>
+            <div class="du-week__hour du-week__hour_09"></div>
+            <div class="du-week__hour du-week__hour_10">
+              <div class="du-bookitems">
+                <div class="du-bookitem du-bookitem__1h"></div>
+                <div class="du-bookitem du-bookitem__2h"></div>
+              </div>
+            </div>
+            <div class="du-week__hour du-week__hour_11"></div>
+            <div class="du-week__hour du-week__hour_12"></div>
+            <div class="du-week__hour du-week__hour_13"></div>
+            <div class="du-week__hour du-week__hour_14"></div>
+            <div class="du-week__hour du-week__hour_15"></div>
+            <div class="du-week__hour du-week__hour_16"></div>
+            <div class="du-week__hour du-week__hour_17"></div>
+            <div class="du-week__hour du-week__hour_18"></div>
           </div>
           <div class="du-week__day du-week__thu">
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
+            <div class="du-week__hour du-week__hour_08"></div>
+            <div class="du-week__hour du-week__hour_09"></div>
+            <div class="du-week__hour du-week__hour_10"></div>
+            <div class="du-week__hour du-week__hour_11"></div>
+            <div class="du-week__hour du-week__hour_12"></div>
+            <div class="du-week__hour du-week__hour_13"></div>
+            <div class="du-week__hour du-week__hour_14"></div>
+            <div class="du-week__hour du-week__hour_15"></div>
+            <div class="du-week__hour du-week__hour_16"></div>
+            <div class="du-week__hour du-week__hour_17"></div>
+            <div class="du-week__hour du-week__hour_18"></div>
           </div>
           <div class="du-week__day du-week__fri">
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
+            <div class="du-week__hour du-week__hour_08"></div>
+            <div class="du-week__hour du-week__hour_09"></div>
+            <div class="du-week__hour du-week__hour_10"></div>
+            <div class="du-week__hour du-week__hour_11"></div>
+            <div class="du-week__hour du-week__hour_12"></div>
+            <div class="du-week__hour du-week__hour_13"></div>
+            <div class="du-week__hour du-week__hour_14"></div>
+            <div class="du-week__hour du-week__hour_15"></div>
+            <div class="du-week__hour du-week__hour_16"></div>
+            <div class="du-week__hour du-week__hour_17"></div>
+            <div class="du-week__hour du-week__hour_18"></div>
           </div>
           <div class="du-week__day du-week__sat du-week__holiday">
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
+            <div class="du-week__hour du-week__hour_08"></div>
+            <div class="du-week__hour du-week__hour_09"></div>
+            <div class="du-week__hour du-week__hour_10"></div>
+            <div class="du-week__hour du-week__hour_11"></div>
+            <div class="du-week__hour du-week__hour_12"></div>
+            <div class="du-week__hour du-week__hour_13"></div>
+            <div class="du-week__hour du-week__hour_14"></div>
+            <div class="du-week__hour du-week__hour_15"></div>
+            <div class="du-week__hour du-week__hour_16"></div>
+            <div class="du-week__hour du-week__hour_17"></div>
+            <div class="du-week__hour du-week__hour_18"></div>
           </div>
           <div class="du-week__day du-week__sun du-week__holiday">
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
-            <div class="du-week__hour"></div>
+            <div class="du-week__hour du-week__hour_08"></div>
+            <div class="du-week__hour du-week__hour_09"></div>
+            <div class="du-week__hour du-week__hour_10"></div>
+            <div class="du-week__hour du-week__hour_11"></div>
+            <div class="du-week__hour du-week__hour_12"></div>
+            <div class="du-week__hour du-week__hour_13"></div>
+            <div class="du-week__hour du-week__hour_14"></div>
+            <div class="du-week__hour du-week__hour_15"></div>
+            <div class="du-week__hour du-week__hour_16"></div>
+            <div class="du-week__hour du-week__hour_17"></div>
+            <div class="du-week__hour du-week__hour_18"></div>
           </div>
         </div>
       </div>
@@ -183,7 +194,7 @@ module.exports = {
   }
   #du-week__left li {
     margin-bottom: 0;
-    height: 75px;
+    height: 72px;
     padding: 0 5px;
     color: #777;
     font-size: 11px;
@@ -211,7 +222,33 @@ module.exports = {
     border-left-color: transparent;
   }
   .du-week__hour {
-    height: 75px;
+    height: 72px;
     border-bottom: 1px solid #d2d2d2;
   }
+
+  /** BOOK ITEM */
+  .du-bookitems {
+    display: flex;
+  }
+  .du-bookitem {
+    width: 20px;
+    height: 20px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    border-radius: 10px;
+    background-color: red;
+    cursor: pointer;
+  }
+  /* .du-bookitem.du-bookitem__05h {
+    height: 36px;
+  }
+  .du-bookitem.du-bookitem__1h {
+    height: 71px;
+  }
+  .du-bookitem.du-bookitem__2h {
+    height: 143px;
+  }
+  .du-bookitem.du-bookitem__3h {
+    height: 143px;
+  } */
 </style>
