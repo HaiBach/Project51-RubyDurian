@@ -52,7 +52,7 @@ module.exports = {
 
 <style scoped>
   .du-nav__logo img {
-    widows: 65px;
+    width: 64px;
     height: auto;
   }
   .du-nav__link.du-active {
