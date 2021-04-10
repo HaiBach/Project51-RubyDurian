@@ -1,3 +1,12 @@
+.du-icon-trash:before {
+  content: "\e908";
+}
+.du-icon-pen:before {
+  content: "\e909";
+}
+.du-icon-x:before {
+  content: "\e90a";
+}
 .du-icon-person:before {
   content: "\e906";
 }

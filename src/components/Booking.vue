@@ -51,7 +51,7 @@
               <div class="du-bookitems">
                 <div class="du-bookitem du-bookitem__05h"></div>
                 <div class="du-bookitem du-bookitem__1h"></div>
-                <div class="du-bookitem du-bookitem__2h"></div>
+                <BookingItem></BookingItem>
               </div>
             </div>
             <div class="du-week__hour du-week__hour_10"></div>
@@ -144,6 +144,7 @@
 <script>
 /** IMPORT */
 import Header from './Header.vue'
+import BookingItem from './Booking-Item.vue'
 
 
 /** EXPORT */
@@ -155,7 +156,7 @@ module.exports = {
     }
   },
   components: {
-    Header,
+    Header, BookingItem,
   },
   computed: {
     bgPattern() {
@@ -216,10 +217,10 @@ module.exports = {
     background-color: transparent;
   }
   .du-week__holiday .du-week__hour {
-    border-bottom-color: transparent;
+    /* border-bottom-color: transparent; */
   }
   .du-week__sun {
-    border-left-color: transparent;
+    /* border-left-color: transparent; */
   }
   .du-week__hour {
     height: 72px;
@@ -237,7 +238,7 @@ module.exports = {
     margin-bottom: 1px;
     border-radius: 10px;
     background-color: red;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
   /* .du-bookitem.du-bookitem__05h {
     height: 36px;

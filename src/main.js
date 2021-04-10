@@ -125,7 +125,7 @@ const App = {
   //   }
   // },
   components: {
-    Navigation: Vue.defineAsyncComponent( () => Navigation ),
+    'Navigation': Vue.defineAsyncComponent( () => Navigation ),
     // 'DuNavigation': Vue.defineAsyncComponent( () => Navigation ),
     // MyHeader: { template: '<h2 style="font-size: 4em">Header</h2>' },
   },
