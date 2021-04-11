@@ -43,6 +43,10 @@ const { loadModule } = window['vue3-sfc-loader']
 const Navigation = loadModule('/src/components/Navigation.vue', options)
 const Dashboard = loadModule('/src/components/Dashboard.vue', options)
 const Booking = loadModule('/src/components/Booking.vue', options)
+const Customers = loadModule('/src/components/Customers.vue', options)
+const Staffs = loadModule('/src/components/Staffs.vue', options)
+const Services = loadModule('/src/components/Services.vue', options)
+const Options = loadModule('/src/components/Options.vue', options)
 
 
 
@@ -58,10 +62,10 @@ const components = {
   Dashboard: () => Dashboard,
   Booking: () => Booking,
   BookingCreate: () => Booking,
-  Customers: { template: '<h2 style="font-size: 4em">Customers page</h2>' },
-  Staffs: { template: '<h2 style="font-size: 4em">Staffs page</h2>' },
-  Services: { template: '<h2 style="font-size: 4em">Services page</h2>' },
-  Options: { template: '<h2 style="font-size: 4em">Options page</h2>' },
+  Customers: () => Customers,
+  Staffs: () => Staffs,
+  Services: () => Services,
+  Options: () => Options,
 }
 
 
@@ -93,39 +97,18 @@ const router = VueRouter.createRouter({
   routes,
   linkActiveClass: 'du-active'
 })
+
+// Biến nhận biết di chuyển bằng link menu wordpress
 let isFirstGo = false
 
 // Hàm chuyển đổi route
-// Kiểm query param `page`
-// Chuyển thành route có dạng `next({ name: 'Booking' })`
-
-// router.beforeEach((to, from, next) => {
-//   const fullname = to.query.page
-//   const names = !!fullname ? fullname.split('-') : []
-//   console.log(names.length)
-
-//   if ( names.length > 1 ) {
-//     const lastname = names[1]
-//     const nameCapitalize = lastname.charAt(0).toUpperCase() + lastname.slice(1)
-//     console.log(nameCapitalize)
-//     next({ name: nameCapitalize })
-//   }
-//   else if (names.length === 1) {
-//     next({ name: 'Dashboard' })
-//   }
-//   else next()
-// })
-
 router.beforeEach((to, from, next) => {
-  console.log(to)
-  console.log(from)
   const query = to.query
 
   // Chỉ thiết lập khi click vào đường link menu wordpress
   if (!isFirstGo) {
     isFirstGo = true
     const names = !!query.page ? query.page.split('rubydurian-') : []
-    console.log(names.length, query.page)
 
     if (names.length > 1) {
       const lastname = names[1]
