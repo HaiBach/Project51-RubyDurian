@@ -9,9 +9,9 @@ module.exports = {
   data() {
     return {
       greeting: "Xin chào mọi người"
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

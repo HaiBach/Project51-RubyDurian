@@ -10,7 +10,7 @@
           :key="route.name"
           class="du-block du-mb-0"
           >
-          <router-link :to="{ name: route.name }"
+          <router-link :to="{ name: route.name, query: route.query }"
             class="du-nav__link du-block du-p-2.5 du-m-2.5 du-rounded-md du-text-gray-500 du-text-2xl du-text-center hover:du-text-black focus:du-shadow-none">
             <i :class="route.icon"></i>
           </router-link>
@@ -18,9 +18,12 @@
       </ul>
     </div>
     <div class="du-nav__bottom">
-      <router-link :to="{ name: 'Options' }"
+      <router-link
+        v-for="route in navBottom"
+        :key="route.name"
+        :to="{ name: route.name, query: route.query }"
         class="du-nav__link du-block du-p-2.5 du-m-2.5 du-rounded-md du-text-gray-500 du-text-2xl du-text-center hover:du-text-black focus:du-shadow-none">
-        <i class="du-icon-gear"></i>
+        <i :class="route.icon"></i>
       </router-link>
     </div>
   </nav>
@@ -35,14 +38,14 @@ module.exports = {
     return {
       urlPlugin: window.rubydurianVA.urlPlugin,
       navTop: [
-        { name: 'Dashboard', icon: 'du-icon-home' },
-        { name: 'Booking', icon: 'du-icon-calendar' },
-        { name: 'Customers', icon: 'du-icon-people' },
-        { name: 'Staffs', icon: 'du-icon-badge' },
-        { name: 'Services', icon: 'du-icon-checklist' },
+        { name: 'Dashboard', query: { page: 'rubydurian' }, icon: 'du-icon-home' },
+        { name: 'Booking', query: { page: 'rubydurian-booking' }, icon: 'du-icon-calendar' },
+        { name: 'Customers', query: { page: 'rubydurian-customers' }, icon: 'du-icon-people' },
+        { name: 'Staffs', query: { page: 'rubydurian-staffs' }, icon: 'du-icon-badge' },
+        { name: 'Services', query: { page: 'rubydurian-services' }, icon: 'du-icon-checklist' },
       ],
       navBottom: [
-        { name: 'Options', icon: 'du-icon-gear' },
+        { name: 'Options', query: { page: 'rubydurian-options' }, icon: 'du-icon-gear' },
       ]
     }
   },
@@ -54,10 +57,6 @@ module.exports = {
 
 
 <style scoped>
-  .du-nav__logo img {
-    width: 62px;
-    height: auto;
-  }
   .du-nav__link.du-active {
     background-color: #DADADA;
     color: #000;

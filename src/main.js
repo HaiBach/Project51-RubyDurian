@@ -93,6 +93,7 @@ const router = VueRouter.createRouter({
   routes,
   linkActiveClass: 'du-active'
 })
+let isFirstGo = false
 
 // Hàm chuyển đổi route
 // Kiểm query param `page`
@@ -114,6 +115,29 @@ const router = VueRouter.createRouter({
 //   }
 //   else next()
 // })
+
+router.beforeEach((to, from, next) => {
+  console.log(to)
+  console.log(from)
+  const query = to.query
+
+  // Chỉ thiết lập khi click vào đường link menu wordpress
+  if (!isFirstGo) {
+    isFirstGo = true
+    const names = !!query.page ? query.page.split('rubydurian-') : []
+    console.log(names.length, query.page)
+
+    if (names.length > 1) {
+      const lastname = names[1]
+      const nameCapitalize = lastname.charAt(0).toUpperCase() + lastname.slice(1)
+      next({ name: nameCapitalize, query: to.query })
+    }
+    else {
+      next({ name: 'Dashboard', query: to.query })
+    }
+  }
+  else next()
+})
 
 
 

@@ -2,26 +2,58 @@
  * ROUTES
  */
 export default [
-  // {
-  //   name: 'Dashboard',
-  //   path: "/admin.php",
-  //   component: 'Dashboard'
-  // },
   {
     name: 'Dashboard',
-    path: "/admin.php?page=rubydurian",
-    component: 'Dashboard'
+    component: 'Dashboard',
+    path: "/admin.php",
+    query: {
+      page: 'rubydurian'
+    }
   },
   {
     name: 'Booking',
-    path: "/admin.php?page=rubydurian-booking",
-    component: 'Booking'
+    component: 'Booking',
+    path: "/admin.php",
+    query: {
+      page: 'rubydurian-booking'
+    }
   },
   {
-    name: 'Bookingcreate',
-    path: "/admin.php?page=rubydurian-booking&type=create",
-    component: 'Booking'
+    name: 'Customers',
+    component: 'Customers',
+    path: "/admin.php",
+    query: {
+      page: 'rubydurian-customers'
+    }
   },
+  {
+    name: 'Staffs',
+    component: 'Staffs',
+    path: "/admin.php",
+    query: {
+      page: 'rubydurian-staffs'
+    }
+  },
+  {
+    name: 'Services',
+    component: 'Services',
+    path: "/admin.php",
+    query: {
+      page: 'rubydurian-services'
+    }
+  },
+  {
+    name: 'Options',
+    component: 'Options',
+    path: "/admin.php",
+    query: {
+      page: 'rubydurian-options'
+    }
+  },
+
+
+
+
   {
     name: 'Booking1',
     path: "/admin.php",
@@ -41,25 +73,5 @@ export default [
       id: '02',
     },
     component: 'Booking'
-  },
-  {
-    name: 'Customers',
-    path: "/admin.php?page=rubydurian-customers",
-    component: 'Customers'
-  },
-  {
-    name: 'Staffs',
-    path: "/admin.php?page=rubydurian-staffs",
-    component: 'Staffs'
-  },
-  {
-    name: 'Services',
-    path: "/admin.php?page=rubydurian-services",
-    component: 'Services'
-  },
-  {
-    name: 'Options',
-    path: "/admin.php?page=rubydurian-options",
-    component: 'Options'
   },
 ]
