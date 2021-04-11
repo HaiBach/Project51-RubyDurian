@@ -1,3 +1,21 @@
+.du-icon-diamond:before {
+  content: "\e90f";
+}
+.du-icon-crown:before {
+  content: "\e910";
+}
+.du-icon-owner:before {
+  content: "\e90b";
+}
+.du-icon-cash-stack:before {
+  content: "\e90c";
+}
+.du-icon-calendar-event:before {
+  content: "\e90d";
+}
+.du-icon-arrow-clockwise:before {
+  content: "\e90e";
+}
 .du-icon-trash:before {
   content: "\e908";
 }
