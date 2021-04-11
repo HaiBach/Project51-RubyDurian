@@ -57,6 +57,7 @@ const Booking = loadModule('/src/components/Booking.vue', options)
 const components = {
   Dashboard: () => Dashboard,
   Booking: () => Booking,
+  BookingCreate: () => Booking,
   Customers: { template: '<h2 style="font-size: 4em">Customers page</h2>' },
   Staffs: { template: '<h2 style="font-size: 4em">Staffs page</h2>' },
   Services: { template: '<h2 style="font-size: 4em">Services page</h2>' },
@@ -96,20 +97,23 @@ const router = VueRouter.createRouter({
 // Hàm chuyển đổi route
 // Kiểm query param `page`
 // Chuyển thành route có dạng `next({ name: 'Booking' })`
-router.beforeEach((to, from, next) => {
-  const fullname = to.query.page
-  const names = !!fullname ? fullname.split('-') : []
 
-  if ( names.length > 1 ) {
-    const lastname = names[1]
-    const nameCapitalize = lastname.charAt(0).toUpperCase() + lastname.slice(1)
-    next({ name: nameCapitalize })
-  }
-  else if (names.length === 1) {
-    next({ name: 'Dashboard' })
-  }
-  else next()
-})
+// router.beforeEach((to, from, next) => {
+//   const fullname = to.query.page
+//   const names = !!fullname ? fullname.split('-') : []
+//   console.log(names.length)
+
+//   if ( names.length > 1 ) {
+//     const lastname = names[1]
+//     const nameCapitalize = lastname.charAt(0).toUpperCase() + lastname.slice(1)
+//     console.log(nameCapitalize)
+//     next({ name: nameCapitalize })
+//   }
+//   else if (names.length === 1) {
+//     next({ name: 'Dashboard' })
+//   }
+//   else next()
+// })
 
 
 

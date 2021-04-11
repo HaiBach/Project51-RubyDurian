@@ -1,11 +1,9 @@
 <template>
   <nav id="rubydurian-nav" class="du-flex du-flex-col du-justify-between du-w-24 du-bg-gray-100">
     <div class="du-nav__top">
-      <div class="du-nav__logo du-text-center du-py-5 du-px-2.5 hover:du-opacity-50">
-        <router-link to="/admin.php?page=rubydurian" class="du-inline-block">
-          <img :src="urlPlugin + '/src/images/logo.svg'" alt="Logo RubyDurian">
-        </router-link>
-      </div>
+      <!-- Logo -->
+      <Logo></Logo>
+
       <ul class="du-flex du-flex-col">
         <li
           v-for="route in navTop"
@@ -30,6 +28,8 @@
 
 
 <script>
+import Logo from './Logo.vue'
+
 module.exports = {
   data() {
     return {
@@ -45,6 +45,9 @@ module.exports = {
         { name: 'Options', icon: 'du-icon-gear' },
       ]
     }
+  },
+  components: {
+    Logo
   }
 }
 </script>

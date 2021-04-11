@@ -23,12 +23,12 @@
       </div>
       <div class="du-header__notification du-ml-2">
         <button
-          class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg hover:du-text-black focus:du-outline-none"
+          class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg du-leading-3 hover:du-text-black focus:du-outline-none"
           ><i class="du-icon-bell"></i></button>
       </div>
       <div class="du-header__owner du-ml-2">
         <button
-          class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg hover:du-text-black focus:du-outline-none"
+          class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg du-leading-3 hover:du-text-black focus:du-outline-none"
           ><i class="du-icon-person"></i></button>
       </div>
     </div>

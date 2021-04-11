@@ -2,7 +2,10 @@
   <!-- HEADER -->
   <Header :title="title"></Header>
 
-  <!-- <div id="rubydurian-maincontent" class="du-p-2.5"> -->
+  <div id="rubydurian-maincontent" class="du-p-2.5">
+    <router-link :to="{ name: 'Booking1', query: { page: 'rubydurian-booking', type: 'edit' }}">Booking 1</router-link>
+    <router-link :to="{ name: 'Booking2', query: { page: 'rubydurian-booking', type: 'edit', id: '02' }}">Booking 2</router-link>
+
     <ul class="du-flex du-flex-wrap du-p-10">
       <li
         v-for="item in list"
@@ -13,7 +16,7 @@
         </div>
       </li>
     </ul>
-  <!-- </div> -->
+  </div>
 </template>
 
 

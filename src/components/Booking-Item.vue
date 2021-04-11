@@ -77,9 +77,6 @@ module.exports = {
 
 
 <style scoped>
-  table {
-    /* width: 100%; */
-  }
   th {
     padding: 10px 10px 10px 0;
     text-align: left;
