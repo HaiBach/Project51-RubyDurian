@@ -40,7 +40,7 @@ module.exports = {
       navTop: [
         { name: 'Dashboard', query: { page: 'rubydurian' }, icon: 'du-icon-home' },
         { name: 'Booking', query: { page: 'rubydurian-booking' }, icon: 'du-icon-calendar' },
-        { name: 'Customers', query: { page: 'rubydurian-customers' }, icon: 'du-icon-people' },
+        { name: 'Customers', query: { page: 'rubydurian-customers' }, icon: 'du-icon-people-2' },
         { name: 'Staffs', query: { page: 'rubydurian-staffs' }, icon: 'du-icon-badge' },
         { name: 'Services', query: { page: 'rubydurian-services' }, icon: 'du-icon-checklist' },
       ],

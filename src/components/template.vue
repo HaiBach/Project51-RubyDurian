@@ -2,9 +2,8 @@
   <p class="du-bg-blue-600">{{ greeting }} World!</p>
 </template>
 
-<script>
-// import defaultExport from './helloworld.js'
 
+<script>
 module.exports = {
   data() {
     return {
@@ -13,6 +12,7 @@ module.exports = {
   }
 }
 </script>
+
 
 <style scoped>
 p {

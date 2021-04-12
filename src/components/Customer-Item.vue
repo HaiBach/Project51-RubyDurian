@@ -1,6 +1,6 @@
 <template>
 <div class="du-customer-item du-w-1/4 du-p-5">
-  <div class="du-customer-item__inner du-overflow-hidden du-flex du-px-5 du-py-2.5 du-rounded-lg du-border-2 du-border-solid du-border-yellow-500 du-bg-yellow-100">
+  <div class="du-customer-item__inner du-overflow-hidden du-flex du-px-5 du-py-2.5 du-rounded-lg du-border-2 du-border-solid du-border-yellow-400">
 
     <div class="du-customer-item__left du-pr-5">
       <img :src="urlAvatar" alt="Avatar" class="du-w-20 du-rounded-full">
@@ -45,11 +45,18 @@ module.exports = {
 </script>
 
 <style scoped>
+  .du-customer-item__inner {
+    background-color: #FFF7E1;
+  }
   .du-customer-item__icon {
     top: -3px;
     right: -8px;
+    width: 26px;
+    height: 26px;
     padding: 5px;
-    font-size: 9px;
+    font-size: 9.5px;
+    line-height: 18px;
+    text-align: center;
   }
   .du-customer-item__footer {
     font-size: 11px;

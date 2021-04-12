@@ -1,3 +1,6 @@
+.du-icon-people-2:before {
+  content: "\e911";
+}
 .du-icon-diamond:before {
   content: "\e90f";
 }
