@@ -2,17 +2,17 @@
   <!-- HEADER -->
   <Header :title="title"></Header>
 
-  <div id="rubydurian-maincontent" class="du-px-5 du-py-2.5">
-    <div id="du-customers-vip">
-      <div class="du-customer-group">
-        <GroupName name="VIP" class-more="du-bg-yellow-400 du-text-gray-700"></GroupName>
+  <div id="rubydurian-maincontent" class="">
+    <TopContent></TopContent>
 
-        <div class="du-customer-items du-flex du-flex-wrap">
-          <CustomerItem></CustomerItem>
-          <CustomerItem></CustomerItem>
-          <CustomerItem></CustomerItem>
-          <CustomerItem></CustomerItem>
-        </div>
+    <div class="du-customers-group du-px-5 du-py-2.5">
+      <GroupName name="VIP" class-more="du-bg-yellow-400 du-text-gray-700"></GroupName>
+
+      <div class="du-customer-items du-flex du-flex-wrap">
+        <CustomerItem></CustomerItem>
+        <CustomerItem></CustomerItem>
+        <CustomerItem></CustomerItem>
+        <CustomerItem></CustomerItem>
       </div>
     </div>
   </div>
@@ -22,6 +22,7 @@
 <script>
 /** IMPORT */
 import Header from './Header.vue'
+import TopContent from './Top-Content.vue'
 import GroupName from './Group-Name.vue'
 import CustomerItem from './Customer-Item.vue'
 
@@ -35,7 +36,7 @@ module.exports = {
     }
   },
   components: {
-    Header, GroupName, CustomerItem,
+    Header, TopContent, GroupName, CustomerItem,
   },
 };
 </script>

@@ -15,8 +15,4 @@ module.exports = {
 
 
 <style scoped>
-p {
-  font-size: 4em;
-  text-align: center;
-}
 </style>

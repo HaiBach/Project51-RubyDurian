@@ -13,4 +13,7 @@ module.exports = {
 
 
 <style scoped>
+.du-group-name__item {
+  letter-spacing: 3px;
+}
 </style>
