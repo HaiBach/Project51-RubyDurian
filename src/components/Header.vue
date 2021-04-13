@@ -21,10 +21,11 @@
           </form>
         </div>
       </div>
-      <div class="du-header__notification du-ml-2">
-        <button
-          class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg du-leading-3 hover:du-text-black focus:du-outline-none"
-          ><i class="du-icon-bell"></i></button>
+      <div class="du-header__notification du-relative du-ml-2">
+        <button class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg du-leading-3 hover:du-text-black focus:du-outline-none">
+          <i class="du-icon-bell"></i>
+        </button>
+        <div class="du-notification__count">12</div>
       </div>
       <div class="du-header__owner du-ml-2">
         <button
@@ -65,5 +66,21 @@ module.exports = {
   }
   #du-form__store option {
     background-color: #fff;
+  }
+
+  /** NOTIFICATION */
+  .du-notification__count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: #EF4444;
+    color: #fff;
+    font-size: 8px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
   }
 </style>
