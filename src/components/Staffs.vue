@@ -35,6 +35,9 @@
         <StaffItem type="member"></StaffItem>
         <StaffItem type="member"></StaffItem>
         <StaffItem type="member"></StaffItem>
+        <StaffItem type="member"></StaffItem>
+        <StaffItem type="member"></StaffItem>
+        <StaffItem type="member"></StaffItem>
       </div>
     </div>
   </div>

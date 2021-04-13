@@ -31,6 +31,15 @@
 
 
 
+  /** Wordpress Menu */
+  #toplevel_page_rubydurian img {
+    display: inline-block;
+    border: none;
+  }
+
+
+
+
 
   /** RubyDurian App */
   #rubydurian-app {
