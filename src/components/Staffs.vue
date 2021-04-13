@@ -10,23 +10,21 @@
 
       <div class="du-customer-items du-flex du-flex-wrap">
         <StaffItem type="manager"></StaffItem>
+        <StaffItem type="manager"></StaffItem>
       </div>
     </div>
 
-    <!-- <div class="du-customers-group du-px-5 du-pb-20">
-      <GroupName name="SILVER" class-more="du-bg-blue-500 du-text-white"></GroupName>
+    <div class="du-customers-group du-px-5 du-pb-20">
+      <GroupName name="LEADER" class-more="du-bg-blue-500 du-text-white"></GroupName>
       
       <div class="du-customer-items du-flex du-flex-wrap">
-        <StaffItem type="silver"></StaffItem>
-        <StaffItem type="silver"></StaffItem>
-        <StaffItem type="silver"></StaffItem>
-        <StaffItem type="silver"></StaffItem>
-        <StaffItem type="silver"></StaffItem>
-        <StaffItem type="silver"></StaffItem>
+        <StaffItem type="leader"></StaffItem>
+        <StaffItem type="leader"></StaffItem>
+        <StaffItem type="leader"></StaffItem>
       </div>
-    </div> -->
+    </div>
 
-    <!-- <div class="du-customers-group du-px-5 du-pb-20">
+    <div class="du-customers-group du-px-5 du-pb-20">
       <GroupName name="MEMBER" class-more="du-bg-gray-600 du-text-white"></GroupName>
       
       <div class="du-customer-items du-flex du-flex-wrap">
@@ -37,9 +35,8 @@
         <StaffItem type="member"></StaffItem>
         <StaffItem type="member"></StaffItem>
         <StaffItem type="member"></StaffItem>
-        <StaffItem type="member"></StaffItem>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 

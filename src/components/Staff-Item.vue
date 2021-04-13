@@ -15,9 +15,13 @@
         <div class="du-staff-item__gender">Male</div>
         <div class="du-staff-item__tel">+1 901 234 5678</div>
         <div class="du-staff-item__email">harold.mcpherson@gmail.com</div>
-        <div class="du-staff-item__tags">
-          <div class="du-staff-item__tag du-px-2.5 du-py-1 du-rounded du-bg-green-500 du-text-white du-font-xs">Marketing Manager</div>
-          <div class="du-staff-item__tag">Department Manager</div>
+        <div class="du-staff-item__tags du-flex du-flex-wrap du-mt-3 du--mr-1.5">
+          <div
+            class="du-staff-item__tag du-px-2 du-py-0.5 du-mr-1 du-mb-1 du-rounded du-text-white"
+            v-for="tag in listType[type]['tags']"
+            :key="tag">
+            {{ tag }}
+          </div>
         </div>
       </div>
 
@@ -36,15 +40,21 @@ module.exports = {
         manager: {
           classType: 'du-staff__manager',
           classIcon: 'du-icon-diamond',
+          tags: ['Marketing Manager', 'Department Manager']
         },
         leader: {
           classType: 'du-staff__leader',
           classIcon: 'du-icon-x-diamond',
+          tags: ['Team Leader', 'Assistant']
         },
         member: {
           classType: 'du-staff__member',
           classIcon: 'du-icon-owner',
+          tags: ['Nail Enhancements', 'Waxing', 'Massage']
         },
+      },
+      staff: {
+        tags: ['Marketing Manager', 'Department Manager']
       }
     }
   },
@@ -109,9 +119,18 @@ module.exports = {
     color: #6B7280;
     font-size: 16px;
   }
-  
-  /** FOOTER */
-  .du-staff-item__footer {
-    font-size: 11px;
+
+  /** TAGS */
+  .du-staff-item__tag {
+    font-size: 10px;
+  }
+  .du-staff__manager .du-staff-item__tag {
+    background-color: #10B981;
+  }
+  .du-staff__leader .du-staff-item__tag {
+    background-color: #3B82F6;
+  }
+  .du-staff__member .du-staff-item__tag {
+    background-color: #6B7280;
   }
 </style>
