@@ -1,13 +1,5 @@
-// import { createApp } from 'vue'
-// import App from './App.vue'
-
 /** IMPORT FILE */
-// import helloworld from './components/helloworld.js'
-
-// Lấy tham số `page` trên url
-// const urlParams = new URLSearchParams(window.location.search)
-// const paramPage = urlParams.get('page')
-
+// import './index.css'
 
 
 
@@ -56,8 +48,6 @@ const Options = loadModule('/src/components/Options.vue', options)
 /**
  * COMPONENTS
  */
-// const { createApp, h } = Vue
-
 const components = {
   Dashboard: () => Dashboard,
   Booking: () => Booking,
