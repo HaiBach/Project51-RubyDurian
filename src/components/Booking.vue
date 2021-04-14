@@ -2,7 +2,7 @@
   <!-- HEADER -->
   <Header :title="title"></Header>
 
-  <div id="rubydurian-maincontent" class="du-p-2.5 du-mt-14">
+  <div id="rubydurian-maincontent" class="du-pl-2.5 du-pt-2.5 du-mt-14">
     <div id="rubydurian-week">
       <div id="du-week__header">
         <ul class="du-flex">

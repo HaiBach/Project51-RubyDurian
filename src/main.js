@@ -109,8 +109,13 @@ router.beforeEach((to, from, next) => {
       next({ name: 'Dashboard', query: to.query })
     }
   }
-  else next()
+  else {
+    next()
+  }
 })
+function changeWordpressMenuCurrent() {
+  console.log('fooo')
+}
 
 
 
