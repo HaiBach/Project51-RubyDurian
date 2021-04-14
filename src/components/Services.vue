@@ -10,6 +10,9 @@
 
       <div class="du-customer-items du-flex du-flex-wrap">
         <ServiceItem></ServiceItem>
+        <ServiceItem></ServiceItem>
+        <ServiceItem></ServiceItem>
+        <ServiceItem></ServiceItem>
       </div>
     </div>
 

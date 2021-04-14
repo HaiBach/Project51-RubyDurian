@@ -1,3 +1,48 @@
+.du-icon-backspace:before {
+  content: "\e920";
+}
+.du-icon-chat-dots:before {
+  content: "\e921";
+}
+.du-icon-plus:before {
+  content: "\e916";
+}
+.du-icon-back:before {
+  content: "\e917";
+}
+.du-icon-columns-gap:before {
+  content: "\e918";
+}
+.du-icon-image:before {
+  content: "\e919";
+}
+.du-icon-search:before {
+  content: "\e91a";
+}
+.du-icon-shuffle:before {
+  content: "\e91b";
+}
+.du-icon-star-fill:before {
+  content: "\e91c";
+}
+.du-icon-star-half:before {
+  content: "\e91d";
+}
+.du-icon-star:before {
+  content: "\e91e";
+}
+.du-icon-x-circle:before {
+  content: "\e91f";
+}
+.du-icon-file-earmark-plus:before {
+  content: "\e913";
+}
+.du-icon-stopwatch:before {
+  content: "\e914";
+}
+.du-icon-clock:before {
+  content: "\e915";
+}
 .du-icon-x-diamond:before {
   content: "\e912";
 }
@@ -55,4 +100,3 @@
 .du-icon-home:before {
   content: "\e900";
 }
-
