@@ -3,7 +3,7 @@
 </template>
 
 
-<script setup>
+<script>
 module.exports = {
   data() {
     return {

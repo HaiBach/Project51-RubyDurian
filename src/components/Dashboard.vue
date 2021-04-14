@@ -20,7 +20,7 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
 import Header from './Header.vue'
 

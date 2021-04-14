@@ -141,7 +141,7 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
 import Header from './Header.vue'
 import BookingItem from './Booking-Item.vue'
