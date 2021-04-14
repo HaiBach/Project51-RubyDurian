@@ -14,8 +14,8 @@
 </template>
 
 
-<script setup>
-module.exports = {
+<script>
+export default {
   data() {
     return {
       greeting: "Xin chào mọi người"

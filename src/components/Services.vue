@@ -17,7 +17,7 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
 import Header from './Header.vue'
 import TopContent from './Top-Content.vue'
@@ -26,7 +26,7 @@ import ServiceItem from './Service-Item.vue'
 
 
 /** EXPORT */
-module.exports = {
+export default {
   data() {
     return {
       title: 'Services',

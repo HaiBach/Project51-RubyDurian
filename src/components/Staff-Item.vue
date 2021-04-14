@@ -30,8 +30,8 @@
 </template>
 
 
-<script setup>
-module.exports = {
+<script>
+export default {
   props: ['type'],
   data() {
     return {

@@ -72,13 +72,13 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
 import Header from './Header.vue'
 
 
 /** EXPORT */
-module.exports = {
+export default {
   data() {
     return {
       title: 'Options',

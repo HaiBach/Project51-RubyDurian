@@ -12,8 +12,8 @@
 </template>
 
 
-<script setup>
-module.exports = {
+<script>
+export default {
   data() {
     return {
       urlPlugin: window.rubydurianVA.urlPlugin,

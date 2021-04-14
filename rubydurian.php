@@ -42,6 +42,12 @@ function get_hashed_file($filename) {
   preg_match($regex, $fileWithHash, $matches);
   return $matches[0];
 }
+function get_hashed_file_sourcemap($filename) {
+  $regex = '/[\w+]+\.[\w+]+\.\w+\.\w+/i';
+  $fileWithHash = glob(dirname(__FILE__) . '/dist/assets/' . $filename . '.*.js.map')[0];
+  preg_match($regex, $fileWithHash, $matches);
+  return $matches[0];
+}
 function get_hashed_file_css($filename) {
   $regex = '/[\w+]+\.[\w+]+\.\w+/i';
   $fileWithHash = glob(dirname(__FILE__) . '/dist/assets/' . $filename . '.*.css')[0];
@@ -82,7 +88,6 @@ function rubydurian_load_vuescripts() {
 add_action('wp_enqueue_scripts', 'rubydurian_load_vuescripts');
 
 function rubydurian_enqueue_admin($hook) {
-
   // $hook === 'toplevel_page_rubydurian'
   // $hook === 'rubydurian_page_rubydurian-booking'
   // $hook === 'rubydurian_page_rubydurian-customers'
@@ -113,28 +118,35 @@ function rubydurian_enqueue_admin($hook) {
       false
     );
     
-    wp_enqueue_script(
-      'rubydurian_main_js',
-      plugin_dir_url( __FILE__ ) . 'src/main.js',
-      array(),
-      filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
-      true
-    );
-
     // wp_enqueue_script(
     //   'rubydurian_main_js',
-    //   plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('index'),
+    //   plugin_dir_url( __FILE__ ) . 'src/main.js',
     //   array(),
-    //   null,
+    //   filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
     //   true
     // );
+
+    wp_enqueue_script(
+      'rubydurian_main_js',
+      plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('index'),
+      array(),
+      null,
+      true
+    );
     // wp_enqueue_script(
-    //   'rubydurian_vendor_js',
-    //   plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('vendor'),
+    //   'rubydurian_main_js_sourcemap',
+    //   plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file_sourcemap('index'),
     //   array(),
     //   null,
     //   true
     // );
+    wp_enqueue_script(
+      'rubydurian_vendor_js',
+      plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('vendor'),
+      array(),
+      null,
+      true
+    );
 
     /** STYLE */
     wp_enqueue_style(
@@ -164,6 +176,7 @@ add_action('admin_enqueue_scripts', 'rubydurian_add_custom_script');
 function add_type_attribute($tag, $handle, $src) {
   if (
     $handle === 'rubydurian_main_js' ||
+    $handle === 'rubydurian_main_js_sourcemap' ||
     $handle === 'rubydurian_vendor_js'
     ) {
     $tag = '<script type="module" src="' . esc_url($src) . '"></script>';

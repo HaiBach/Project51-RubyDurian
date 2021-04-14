@@ -46,7 +46,7 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
 import Header from './Header.vue'
 import TopContent from './Top-Content.vue'
@@ -55,7 +55,7 @@ import CustomerItem from './Customer-Item.vue'
 
 
 /** EXPORT */
-module.exports = {
+export default {
   data() {
     return {
       title: 'Customers',

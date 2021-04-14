@@ -43,12 +43,21 @@ const options = {
 
 // Sử dung `import` của ES6 để import các components
 import Navigation from './components/Navigation.vue'
+// import Dashboard from './components/template.vue'
+import Booking from './components/template.vue'
+import Customers from './components/template.vue'
+import Staffs from './components/template.vue'
+import Services from './components/template.vue'
+import Options from './components/template.vue'
+
 import Dashboard from './components/Dashboard.vue'
-import Booking from './components/Booking.vue'
-import Customers from './components/Customers.vue'
-import Staffs from './components/Staffs.vue'
-import Services from './components/Services.vue'
-import Options from './components/Options.vue'
+// import Booking from './components/Booking.vue'
+// import Customers from './components/Customers.vue'
+// import Staffs from './components/Staffs.vue'
+// import Services from './components/Services.vue'
+// import Options from './components/Options.vue'
+
+// console.log(Dashboard)
 
 
 
@@ -67,6 +76,15 @@ const components = {
   Services: () => Services,
   Options: () => Options,
 }
+// const components = {
+//   Dashboard: Dashboard,
+//   Booking: Booking,
+//   BookingCreate: Booking,
+//   Customers: Customers,
+//   Staffs: Staffs,
+//   Services: Services,
+//   Options: Options,
+// }
 
 
 
@@ -84,6 +102,10 @@ const routes = routesJSON.map(route => (
     component: components[ route['component'] ]
   }
 ))
+// const routes = [
+//   // { path: '/admin.php', name: 'Dashboard', component: { template: '<div>Dashboard</div>' }}
+//   { path: '/admin.php', name: 'Dashboard', component: () => Dashboard }
+// ]
 
 
 
@@ -136,7 +158,8 @@ function changeWordpressMenuCurrent() {
  */
 const App = {
   components: {
-    'Navigation': Vue.defineAsyncComponent( () => Navigation ),
+    // 'Navigation': Vue.defineAsyncComponent( () => Navigation ),
+    'Navigation': () => Navigation,
   },
 }
 const app = Vue.createApp(App)

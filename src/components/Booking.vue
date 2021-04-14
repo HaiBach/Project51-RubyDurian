@@ -141,14 +141,14 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
 import Header from './Header.vue'
 import BookingItem from './Booking-Item.vue'
 
 
 /** EXPORT */
-module.exports = {
+export default {
   data() {
     return {
       urlPlugin: window.rubydurianVA.urlPlugin,

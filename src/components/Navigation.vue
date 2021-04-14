@@ -30,10 +30,10 @@
 </template>
 
 
-<script setup>
+<script>
 import Logo from './Logo.vue'
 
-module.exports = {
+export default {
   data() {
     return {
       urlPlugin: window.rubydurianVA.urlPlugin,

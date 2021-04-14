@@ -44,7 +44,7 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
 import Header from './Header.vue'
 import TopContent from './Top-Content.vue'
@@ -53,7 +53,7 @@ import StaffItem from './Staff-Item.vue'
 
 
 /** EXPORT */
-module.exports = {
+export default {
   data() {
     return {
       title: 'Staffs',

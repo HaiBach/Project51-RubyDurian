@@ -5,8 +5,8 @@
 </template>
 
 
-<script setup>
-module.exports = {
+<script>
+export default {
   props: ['name', 'classMore']
 }
 </script>

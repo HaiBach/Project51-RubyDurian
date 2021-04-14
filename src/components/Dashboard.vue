@@ -1,6 +1,6 @@
 <template>
   <!-- HEADER -->
-  <Header :title="title"></Header>
+  <!-- <Header :title="title"></Header> -->
 
   <div id="rubydurian-maincontent" class="du-p-2.5 du-mt-14">
     <router-link :to="{ name: 'Booking1', query: { page: 'rubydurian-booking', type: 'edit' }}">Booking 1</router-link>
@@ -20,14 +20,14 @@
 </template>
 
 
-<script setup>
+<script>
 /** IMPORT */
-import Header from './Header.vue'
+// import Header from './Header.vue'
 
 
 /** EXPORT */
-module.exports = {
-  data() {
+const Dashboard = {
+    data() {
     return {
       title: 'Dashboard',
       list: [
@@ -53,9 +53,10 @@ module.exports = {
     }
   },
   components: {
-    Header,
+    // Header,
   },
 };
+export default Dashboard
 </script>
 
 

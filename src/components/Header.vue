@@ -37,8 +37,8 @@
 </template>
 
 
-<script setup>
-module.exports = {
+<script>
+export default {
   props: ['title'],
   data() {
     return {
