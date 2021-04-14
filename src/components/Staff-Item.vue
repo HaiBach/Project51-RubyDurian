@@ -30,7 +30,7 @@
 </template>
 
 
-<script>
+<script setup>
 module.exports = {
   props: ['type'],
   data() {

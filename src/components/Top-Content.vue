@@ -14,7 +14,7 @@
 </template>
 
 
-<script>
+<script setup>
 module.exports = {
   data() {
     return {

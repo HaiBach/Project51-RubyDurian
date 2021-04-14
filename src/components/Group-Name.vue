@@ -5,7 +5,7 @@
 </template>
 
 
-<script>
+<script setup>
 module.exports = {
   props: ['name', 'classMore']
 }

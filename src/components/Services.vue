@@ -17,7 +17,7 @@
 </template>
 
 
-<script>
+<script setup>
 /** IMPORT */
 import Header from './Header.vue'
 import TopContent from './Top-Content.vue'

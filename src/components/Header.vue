@@ -37,7 +37,7 @@
 </template>
 
 
-<script>
+<script setup>
 module.exports = {
   props: ['title'],
   data() {

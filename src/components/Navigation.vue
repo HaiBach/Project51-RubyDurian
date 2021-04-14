@@ -30,7 +30,7 @@
 </template>
 
 
-<script>
+<script setup>
 import Logo from './Logo.vue'
 
 module.exports = {
