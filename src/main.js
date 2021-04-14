@@ -32,23 +32,23 @@ const options = {
   },
 }
 // Sử dụng `loadModule` để import components
-// const { loadModule } = window['vue3-sfc-loader']
-// const Navigation = loadModule('/src/components/Navigation.vue', options)
-// const Dashboard = loadModule('/src/components/Dashboard.vue', options)
-// const Booking = loadModule('/src/components/Booking.vue', options)
-// const Customers = loadModule('/src/components/Customers.vue', options)
-// const Staffs = loadModule('/src/components/Staffs.vue', options)
-// const Services = loadModule('/src/components/Services.vue', options)
-// const Options = loadModule('/src/components/Options.vue', options)
+const { loadModule } = window['vue3-sfc-loader']
+const Navigation = loadModule('/src/components/Navigation.vue', options)
+const Dashboard = loadModule('/src/components/Dashboard.vue', options)
+const Booking = loadModule('/src/components/Booking.vue', options)
+const Customers = loadModule('/src/components/Customers.vue', options)
+const Staffs = loadModule('/src/components/Staffs.vue', options)
+const Services = loadModule('/src/components/Services.vue', options)
+const Options = loadModule('/src/components/Options.vue', options)
 
 // Sử dung `import` của ES6 để import các components
-import Navigation from './components/Navigation.vue'
-import Dashboard from './components/Dashboard.vue'
-import Booking from './components/Booking.vue'
-import Customers from './components/Customers.vue'
-import Staffs from './components/Staffs.vue'
-import Services from './components/Services.vue'
-import Options from './components/Options.vue'
+// import Navigation from './components/Navigation.vue'
+// import Dashboard from './components/Dashboard.vue'
+// import Booking from './components/Booking.vue'
+// import Customers from './components/Customers.vue'
+// import Staffs from './components/Staffs.vue'
+// import Services from './components/Services.vue'
+// import Options from './components/Options.vue'
 
 
 

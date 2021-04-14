@@ -28,7 +28,7 @@
 </template>
 
 
-<script setup>
+<script>
 module.exports = {
   props: ['type'],
   data() {
