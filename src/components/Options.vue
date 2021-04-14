@@ -2,7 +2,7 @@
   <!-- HEADER -->
   <Header :title="title"></Header>
 
-  <div id="rubydurian-maincontent" class="du-p-2.5">
+  <div id="rubydurian-maincontent" class="du-p-2.5 du-mt-14">
     <ul class="du-flex du-flex-wrap du-p-10">
       <li
         v-for="item in list"

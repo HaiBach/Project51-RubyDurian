@@ -1,5 +1,5 @@
 <template>
-  <header class="du-flex du-justify-between du-items-center du-px-10 du-border-b du-border-gray-300">
+  <header class="du-fixed du-h-14 du-flex du-justify-between du-items-center du-px-10 du-border-b">
     <div class="du-header__left">
       <h2 class="du-text-xl du-font-bold">{{ title }}</h2>
     </div>
@@ -51,8 +51,17 @@ module.exports = {
 
 <style scoped>
   header {
-    height: 60px;
+    width: calc(100% - 256px);
+    border-color: rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255, 0.75);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 9;
   }
+  body.folded header {
+    width: calc(100% - 132px);
+  }
+
   #du-form__store {
     min-width: 150px;
     padding: 3px 36px 3px 15px;

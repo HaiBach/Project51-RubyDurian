@@ -1,5 +1,5 @@
 <template>
-  <nav id="rubydurian-nav" class="du-flex du-flex-col du-justify-between du-w-24 du-bg-gray-100">
+  <nav id="rubydurian-nav" class="du-fixed du-flex du-flex-col du-justify-between du-w-24 du-bg-gray-100">
     <div class="du-nav__top">
       <!-- Logo -->
       <Logo></Logo>
@@ -60,5 +60,8 @@ module.exports = {
   .du-nav__link.du-active {
     background-color: #DADADA;
     color: #000;
+  }
+  nav {
+    min-height: calc(100% - 32px);
   }
 </style>

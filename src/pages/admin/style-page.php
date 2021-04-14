@@ -36,6 +36,21 @@
     display: inline-block;
     border: none;
   }
+  /** Wordpress Footer */
+  /* .toplevel_page_rubydurian #wpfooter,
+  .rubydurian_page_rubydurian-booking #wpfooter,
+  .rubydurian_page_rubydurian-customers #wpfooter,
+  .rubydurian_page_rubydurian-staffs #wpfooter,
+  .rubydurian_page_rubydurian-services #wpfooter,
+  .rubydurian_page_rubydurian-options #wpfooter {
+    display: none;
+  } */
+  #wpfooter {
+    display: none;
+  }
+  #wpbody-content {
+    padding-bottom: 0;
+  }
 
 
 
@@ -45,12 +60,12 @@
   #rubydurian-app {
     margin-left: -20px;
     width: calc(100% + 20px);
-    min-height: calc(100vh - 44px - 32px);
+    min-height: calc(100vh - 32px);
   }
   #rubydurian-app img {
     border: none;
   }
-  #wpbody-content {
-    padding-bottom: 44px;
+  #rubydurian-main {
+    
   }
 </style>

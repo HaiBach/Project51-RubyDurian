@@ -2,7 +2,7 @@
   <!-- HEADER -->
   <Header :title="title"></Header>
 
-  <div id="rubydurian-maincontent" class="">
+  <div id="rubydurian-maincontent" class="du-mt-14">
     <TopContent></TopContent>
 
     <div class="du-customers-group du-px-5 du-pb-20">
