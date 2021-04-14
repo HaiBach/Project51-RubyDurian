@@ -39,7 +39,7 @@ module.exports = {
           classType: 'du-service__combo',
           classIcon: 'du-icon-diamond',
         },
-        service: {
+        item: {
           classType: 'du-customer__member',
           classIcon: 'du-icon-owner',
         },
@@ -52,15 +52,7 @@ module.exports = {
       if (this.type !== undefined) {
         return this.listType[this.type]['classType']
       }
-      return this.listType['member']['classType']
-    },
-
-    // Return tên class icon
-    classIcon() {
-      if (this.type !== undefined) {
-        return this.listType[this.type]['classIcon']
-      }
-      return this.listType['member']['classIcon']
+      return this.listType['item']['classType']
     },
   }
 }
