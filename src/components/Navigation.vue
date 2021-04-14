@@ -50,7 +50,7 @@ export default {
     }
   },
   components: {
-    Logo
+    Logo,
   }
 }
 </script>

@@ -36,11 +36,7 @@
 
 
 <script>
-<<<<<<< HEAD
 export default {
-=======
-module.exports = {
->>>>>>> 5cc63d54a9e12a042304609f73b2a0c08f949971
   props: ['type'],
   data() {
     return {

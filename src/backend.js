@@ -40,19 +40,6 @@ const Customers = loadModule('/src/components/Customers.vue', options)
 const Staffs = loadModule('/src/components/Staffs.vue', options)
 const Services = loadModule('/src/components/Services.vue', options)
 const Options = loadModule('/src/components/Options.vue', options)
-<<<<<<< HEAD:src/backend.js
-=======
-
-// Sử dung `import` của ES6 để import các components
-// import Navigation from './components/Navigation.vue'
-// import Dashboard from './components/Dashboard.vue'
-// import Booking from './components/Booking.vue'
-// import Customers from './components/Customers.vue'
-// import Staffs from './components/Staffs.vue'
-// import Services from './components/Services.vue'
-// import Options from './components/Options.vue'
-
->>>>>>> 5cc63d54a9e12a042304609f73b2a0c08f949971:src/main.js
 
 
 
