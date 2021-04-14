@@ -15,7 +15,7 @@
 
 
 <script>
-module.exports = {
+export default {
   data() {
     return {
       greeting: "Xin chào mọi người"

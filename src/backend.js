@@ -1,13 +1,5 @@
-// import { createApp } from 'vue'
-// import App from './App.vue'
-
 /** IMPORT FILE */
-// import helloworld from './components/helloworld.js'
-
-// Lấy tham số `page` trên url
-// const urlParams = new URLSearchParams(window.location.search)
-// const paramPage = urlParams.get('page')
-
+// import './index.css'
 
 
 
@@ -39,6 +31,7 @@ const options = {
     document.head.insertBefore(style, ref)
   },
 }
+// Sử dụng `loadModule` để import components
 const { loadModule } = window['vue3-sfc-loader']
 const Navigation = loadModule('/src/components/Navigation.vue', options)
 const Dashboard = loadModule('/src/components/Dashboard.vue', options)
@@ -52,12 +45,9 @@ const Options = loadModule('/src/components/Options.vue', options)
 
 
 
-
 /**
  * COMPONENTS
  */
-// const { createApp, h } = Vue
-
 const components = {
   Dashboard: () => Dashboard,
   Booking: () => Booking,
@@ -119,8 +109,13 @@ router.beforeEach((to, from, next) => {
       next({ name: 'Dashboard', query: to.query })
     }
   }
-  else next()
+  else {
+    next()
+  }
 })
+function changeWordpressMenuCurrent() {
+  console.log('fooo')
+}
 
 
 
@@ -130,21 +125,10 @@ router.beforeEach((to, from, next) => {
  * CREATE NEW APP
  */
 const App = {
-  // data() {
-  //   return {
-  //     title: ''
-  //   }
-  // },
   components: {
+    // 'Navigation': () => Navigation,
     'Navigation': Vue.defineAsyncComponent( () => Navigation ),
-    // 'DuNavigation': Vue.defineAsyncComponent( () => Navigation ),
-    // MyHeader: { template: '<h2 style="font-size: 4em">Header</h2>' },
   },
-  // methods: {
-    // currentRouteName() {
-    //   console.log('current route name')
-    // }
-  // }
 }
 const app = Vue.createApp(App)
 app.use(router)

@@ -1,5 +1,5 @@
 <template>
-  <header class="du-flex du-justify-between du-items-center du-px-10 du-border-b du-border-gray-300">
+  <header class="du-fixed du-h-14 du-flex du-justify-between du-items-center du-px-10 du-border-b">
     <div class="du-header__left">
       <h2 class="du-text-xl du-font-bold">{{ title }}</h2>
     </div>
@@ -21,10 +21,11 @@
           </form>
         </div>
       </div>
-      <div class="du-header__notification du-ml-2">
-        <button
-          class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg du-leading-3 hover:du-text-black focus:du-outline-none"
-          ><i class="du-icon-bell"></i></button>
+      <div class="du-header__notification du-relative du-ml-2">
+        <button class="du-px-4 du-py-2.5 du-rounded du-text-gray-500 du-text-lg du-leading-3 hover:du-text-black focus:du-outline-none">
+          <i class="du-icon-bell"></i>
+        </button>
+        <div class="du-notification__count">12</div>
       </div>
       <div class="du-header__owner du-ml-2">
         <button
@@ -37,7 +38,7 @@
 
 
 <script>
-module.exports = {
+export default {
   props: ['title'],
   data() {
     return {
@@ -50,8 +51,17 @@ module.exports = {
 
 <style scoped>
   header {
-    height: 60px;
+    width: calc(100% - 256px);
+    border-color: rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255, 0.75);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 9;
   }
+  body.folded header {
+    width: calc(100% - 132px);
+  }
+
   #du-form__store {
     min-width: 150px;
     padding: 3px 36px 3px 15px;
@@ -65,5 +75,21 @@ module.exports = {
   }
   #du-form__store option {
     background-color: #fff;
+  }
+
+  /** NOTIFICATION */
+  .du-notification__count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: #EF4444;
+    color: #fff;
+    font-size: 8px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
   }
 </style>

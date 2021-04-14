@@ -13,7 +13,7 @@
   </p>
 </template>
 
-<script setup>
+<script>
 import { defineProps, reactive } from 'vue'
 
 defineProps({

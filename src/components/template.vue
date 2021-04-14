@@ -4,7 +4,7 @@
 
 
 <script>
-module.exports = {
+export default {
   data() {
     return {
       greeting: "Xin chào mọi người"
@@ -15,4 +15,4 @@ module.exports = {
 
 
 <style scoped>
-</style>
+</style>  

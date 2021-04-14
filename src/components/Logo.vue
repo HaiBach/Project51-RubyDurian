@@ -13,7 +13,7 @@
 
 
 <script>
-module.exports = {
+export default {
   data() {
     return {
       urlPlugin: window.rubydurianVA.urlPlugin,

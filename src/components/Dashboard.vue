@@ -2,7 +2,7 @@
   <!-- HEADER -->
   <Header :title="title"></Header>
 
-  <div id="rubydurian-maincontent" class="du-p-2.5">
+  <div id="rubydurian-maincontent" class="du-p-2.5 du-mt-14">
     <router-link :to="{ name: 'Booking1', query: { page: 'rubydurian-booking', type: 'edit' }}">Booking 1</router-link>
     <router-link :to="{ name: 'Booking2', query: { page: 'rubydurian-booking', type: 'edit', id: '02' }}">Booking 2</router-link>
 
@@ -26,8 +26,8 @@ import Header from './Header.vue'
 
 
 /** EXPORT */
-module.exports = {
-  data() {
+export default {
+    data() {
     return {
       title: 'Dashboard',
       list: [
@@ -55,7 +55,7 @@ module.exports = {
   components: {
     Header,
   },
-};
+}
 </script>
 
 

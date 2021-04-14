@@ -2,7 +2,7 @@
   <Navigation></Navigation>
 
   <!-- Main -->
-  <main id="rubydurian-main" class="du-bg-white du-flex-1">
+  <main id="rubydurian-main" class="du-relative du-bg-white du-flex-1 du-ml-24">
     <!-- Route Outlet -->
     <router-view></router-view>
   </main>

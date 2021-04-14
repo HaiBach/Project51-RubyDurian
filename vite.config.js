@@ -5,9 +5,6 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   build: {
-    filenameHashing: false
+    // sourcemap: true,
   },
-  // dev: {
-  //   base: 'http://rubydurian.test/wp-admin/'
-  // }
 })

@@ -1,3 +1,6 @@
+.du-icon-x-diamond:before {
+  content: "\e912";
+}
 .du-icon-people-2:before {
   content: "\e911";
 }
@@ -52,3 +55,4 @@
 .du-icon-home:before {
   content: "\e900";
 }
+
