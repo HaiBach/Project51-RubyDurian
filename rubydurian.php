@@ -290,10 +290,7 @@ function rubydurian_shortcode_example() {
   wp_enqueue_script('rubydurian_vue3_sfc_loader');
   wp_enqueue_script('rubydurian_frontend_js');
 
-  $html = '<div id="rubydurian-app">'
-            .'<FrontEnd></FrontEnd>'
-         .'</div>';
+  $html = '<div id="rubydurian-app"></div>';
   return $html;
-} // end function
-
+}
 add_shortcode( 'wpvue', 'rubydurian_shortcode_example' );

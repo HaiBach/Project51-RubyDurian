@@ -1,5 +1,5 @@
 <template>
-  <p class="du-bg-blue-600">{{ greeting }} World!</p>
+  <h3 class="du-bg-blue-600">{{ greeting }} World!</h3>
 </template>
 
 
