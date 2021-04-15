@@ -16,6 +16,6 @@ export default {
   .du-group-name__item {
     min-width: 210px;
     font-size: 0.75rem;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
   }
 </style>

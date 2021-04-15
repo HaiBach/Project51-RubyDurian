@@ -65,7 +65,7 @@ export default {
     background-color: #FFFBEB;
   }
   .du-service__item .du-service-item__inner {
-    background-color: #F3F4F6;
+    background-color: #F9FAFB;
   }
 
   .du-service-item__right {
