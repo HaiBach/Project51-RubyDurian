@@ -26,7 +26,7 @@ const options = {
 }
 // Sử dụng `loadModule` để import components
 const { loadModule } = window['vue3-sfc-loader']
-const FrontEnd = loadModule('/src/Front-End.vue', options)
+const FrontEnd = loadModule('/src/FrontEnd.vue', options)
 
 
 

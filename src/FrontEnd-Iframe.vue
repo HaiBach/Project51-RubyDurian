@@ -1,7 +1,5 @@
 <template>
-  <button>RubyDurian</button>
   <h3 class="du-bg-blue-600">{{ greeting }} World!</h3>
-  <iframe src=""></iframe>
 </template>
 
 
@@ -9,9 +7,10 @@
 export default {
   data() {
     return {
+      // urlPlugin: window.rubydurianVA.urlPlugin,
       greeting: "Xin chào mọi người"
     }
-  }
+  },
 }
 </script>
 
