@@ -55,21 +55,8 @@ function get_hashed_file_css($filename) {
   return $matches[0];
 }
 
-function rubydurian_load_vuescripts() {
-  // wp_register_script(
-  //   'rubydurian_backend_js',
-  //   plugin_dir_url( __FILE__ ) . 'src/main.js',
-  //   array(),
-  //   filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
-  //   true
-  // );
-  // wp_register_script(
-  //   'rubydurian_backend_js',
-  //   plugin_dir_url( __FILE__ ) . 'dist/assets/index.08133c3c.js',
-  //   array(),
-  //   filemtime( plugin_dir_path( __FILE__ ) . 'dist/assets/index.08133c3c.js' ),
-  //   true
-  // );
+// Load script ở Front-end
+function rubydurian_loadscript_frontend() {
   wp_register_script(
     'rubydurian_vuejs_next',
     plugin_dir_url( __FILE__ ) . 'src/assets/vue-next.js',
@@ -78,14 +65,28 @@ function rubydurian_load_vuescripts() {
     false
   );
   wp_register_script(
-    'rubydurian_backend_js',
-    plugin_dir_url( __FILE__ ) . 'src/backend.js',
+    'rubydurian_vue_router',
+    plugin_dir_url( __FILE__ ) . 'src/assets/vue-router.js',
     array(),
-    filemtime( plugin_dir_path( __FILE__ ) . 'src/backend.js' ),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue-router.js' ),
+    false
+  );
+  wp_register_script(
+    'rubydurian_vue3_sfc_loader',
+    plugin_dir_url( __FILE__ ) . 'src/assets/vue3-sfc-loader.js',
+    array(),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/vue3-sfc-loader.js' ),
+    false
+  );
+  wp_register_script(
+    'rubydurian_frontend_js',
+    plugin_dir_url( __FILE__ ) . 'src/frontend.js',
+    array(),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/frontend.js' ),
     true
   );
 }
-add_action('wp_enqueue_scripts', 'rubydurian_load_vuescripts');
+add_action('wp_enqueue_scripts', 'rubydurian_loadscript_frontend');
 
 function rubydurian_enqueue_admin($hook) {
   // $hook === 'toplevel_page_rubydurian'
@@ -179,7 +180,8 @@ function add_type_attribute($tag, $handle, $src) {
   if (
     $handle === 'rubydurian_backend_js' ||
     $handle === 'rubydurian_backend_js_sourcemap' ||
-    $handle === 'rubydurian_vendor_js'
+    $handle === 'rubydurian_vendor_js' ||
+    $handle === 'rubydurian_frontend_js'
     ) {
     $tag = '<script type="module" src="' . esc_url($src) . '"></script>';
     return $tag;
@@ -281,9 +283,11 @@ add_action('admin_menu', 'rubydurian_register_menu');
 /**
  * ADD SHORTCODE
  */
-function func_wp_vue() {
+function rubydurian_shortcode_example() {
   wp_enqueue_script('rubydurian_vuejs_next');
-  wp_enqueue_script('rubydurian_backend_js');
+  wp_enqueue_script('rubydurian_vue_router');
+  wp_enqueue_script('rubydurian_vue3_sfc_loader');
+  wp_enqueue_script('rubydurian_frontend_js');
 
   $str= "<div id='rubydurian-app'>"
         ."Message from Vue: {{ message }}"
@@ -291,4 +295,4 @@ function func_wp_vue() {
   return $str;
 } // end function
 
-add_shortcode( 'wpvue', 'func_wp_vue' );
+add_shortcode( 'wpvue', 'rubydurian_shortcode_example' );

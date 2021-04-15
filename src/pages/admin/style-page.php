@@ -51,6 +51,10 @@
   #wpbody-content {
     padding-bottom: 0;
   }
+  #update-nag, .update-nag {
+    position: absolute;
+    z-index: 99;
+  }
 
 
 

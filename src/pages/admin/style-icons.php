@@ -1,3 +1,30 @@
+.du-icon-crown-fill:before {
+  content: "\e900";
+}
+.du-icon-calendar2-week:before {
+  content: "\e904";
+}
+.du-icon-calendar2-week-fill:before {
+  content: "\e923";
+}
+.du-icon-house:before {
+  content: "\e928";
+}
+.du-icon-gear-fill:before {
+  content: "\e922";
+}
+.du-icon-people-fill:before {
+  content: "\e924";
+}
+.du-icon-person-fill:before {
+  content: "\e925";
+}
+.du-icon-checklist-fill:before {
+  content: "\e926";
+}
+.du-icon-house-fill:before {
+  content: "\e927";
+}
 .du-icon-backspace:before {
   content: "\e920";
 }
@@ -91,12 +118,6 @@
 .du-icon-badge:before {
   content: "\e903";
 }
-.du-icon-calendar:before {
-  content: "\e904";
-}
 .du-icon-checklist:before {
   content: "\e905";
-}
-.du-icon-home:before {
-  content: "\e900";
 }
