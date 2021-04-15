@@ -18,7 +18,6 @@
      vue: Vue
    },
    async getFile(url) {
-     console.log(urlPlugin)
      const fullURL = urlPlugin + url
      const res = await fetch(fullURL)
      if ( !res.ok ) {
@@ -34,13 +33,7 @@
  }
  // Sử dụng `loadModule` để import components
  const { loadModule } = window['vue3-sfc-loader']
- const Navigation = loadModule('/src/components/Navigation.vue', options)
- const Dashboard = loadModule('/src/components/Dashboard.vue', options)
- const Booking = loadModule('/src/components/Booking.vue', options)
- const Customers = loadModule('/src/components/Customers.vue', options)
- const Staffs = loadModule('/src/components/Staffs.vue', options)
- const Services = loadModule('/src/components/Services.vue', options)
- const Options = loadModule('/src/components/Options.vue', options)
+ const FrontEnd = loadModule('/src/Front-End.vue', options)
  
  
  
@@ -84,7 +77,7 @@
   * ROUTER
   */
  const router = VueRouter.createRouter({
-   history: VueRouter.createWebHistory('/wp-admin/'),
+   history: VueRouter.createWebHistory('/'),
    routes,
    linkActiveClass: 'du-active'
  })
@@ -114,24 +107,24 @@
      next()
    }
  })
- function changeWordpressMenuCurrent() {
-   console.log('fooo')
- }
  
  
  
  
  
- /**
+/**
   * CREATE NEW APP
   */
- const App = {
-   components: {
-     // 'Navigation': () => Navigation,
-     'Navigation': Vue.defineAsyncComponent( () => Navigation ),
-   },
- }
- const app = Vue.createApp(App)
- app.use(router)
- app.mount('#rubydurian-app')
- console.log('Finish Create New App')
+const App = {
+  data() {
+    return {
+      message: 'Xin chao moi nguoi 123'
+    }
+  },
+  components: {
+    FrontEnd: Vue.defineAsyncComponent( () => FrontEnd ),
+    // FrontEnd: () => FrontEnd,
+  },
+}
+const app = Vue.createApp(App)
+app.mount('#rubydurian-app')

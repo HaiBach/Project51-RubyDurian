@@ -173,6 +173,7 @@ function rubydurian_add_custom_script($hook) {
   <?php
 }
 add_action('admin_enqueue_scripts', 'rubydurian_add_custom_script');
+add_action('wp_head', 'rubydurian_add_custom_script');
 
 
 /** Thêm attribute `module` trên thẻ `script` */
@@ -289,10 +290,10 @@ function rubydurian_shortcode_example() {
   wp_enqueue_script('rubydurian_vue3_sfc_loader');
   wp_enqueue_script('rubydurian_frontend_js');
 
-  $str= "<div id='rubydurian-app'>"
-        ."Message from Vue: {{ message }}"
-        ."</div>";  
-  return $str;
+  $html = '<div id="rubydurian-app">'
+            .'<FrontEnd></FrontEnd>'
+         .'</div>';
+  return $html;
 } // end function
 
 add_shortcode( 'wpvue', 'rubydurian_shortcode_example' );
