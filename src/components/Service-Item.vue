@@ -5,18 +5,18 @@
       <div class="du-service-item__left">
         <img :src="urlThumbnail" alt="Service Thumbnail" class="du-w-36">
       </div>
-      <div class="du-service-item__right du-flex-1 du-px-5 du-py-3">
+      <div class="du-service-item__right du-flex du-flex-col du-justify-center du-flex-1 du-px-5 du-py-3">
         <div class="du-service-item__name du-pr-10 du-text-base du-font-bold">Eyebrow & Lips (Waxing)</div>
-        <div class="du-service-item__footer du-flex du-items-center du-mt-2.5 du-border-t">
-          <div class="du-service-item__allcost du-pr-4 du-opacity-80">
+        <div class="du-service-item__footer du-flex du-items-center du-mt-2.5">
+          <div class="du-service-item__allcost du-pr-4">
             <span>20m</span>
             <i class="du-icon-clock du-pl-1.5"></i>
           </div>
-          <div class="du-service-item__return du-pr-4 du-opacity-80">
+          <div class="du-service-item__return du-pr-4">
             <span>23</span>
             <i class="du-icon-cash-stack du-pl-1.5"></i>
           </div>
-          <div class="du-service-item__booking du-pr-4 du-opacity-80">
+          <div class="du-service-item__booking du-pr-4">
             <span>102</span>
             <i class="du-icon-file-earmark-plus du-pl-1.5"></i>
           </div>
@@ -62,14 +62,18 @@ export default {
 <style scoped>
   /** BACKGROUND + BORDER */
   .du-service__combo .du-service-item__inner {
-    background-color: #DBEAFE;
+    background-color: #FFFBEB;
   }
   .du-service__item .du-service-item__inner {
-    background-color: #E5E7EB;
+    background-color: #F3F4F6;
   }
 
+  /** Name */
+  .du-service-item__name {
+    font-size: 18px;
+  }
   /** Footer */
   .du-service-item__footer {
-    font-size: 11px;
+    font-size: 12px;
   }
 </style>

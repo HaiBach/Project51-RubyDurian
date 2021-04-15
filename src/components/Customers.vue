@@ -5,29 +5,8 @@
   <div id="rubydurian-maincontent" class="du-mt-14">
     <TopContent></TopContent>
 
-    <div class="du-customers-group du-px-5 du-pb-20">
+    <div class="du-customers-group du-px-5 du-pb-16">
       <GroupName name="VIP" class-more="du-bg-yellow-400 du-text-gray-700"></GroupName>
-      <div class="du-customer-items du-flex du-flex-wrap">
-        <CustomerItem></CustomerItem>
-        <CustomerItem></CustomerItem>
-        <CustomerItem></CustomerItem>
-      </div>
-    </div>
-
-    <div class="du-customers-group du-px-5 du-pb-16">
-      <GroupName name="SILVER" class-more="du-bg-blue-500 du-text-white"></GroupName>
-      <div class="du-customer-items du-flex du-flex-wrap">
-        <CustomerItem></CustomerItem>
-        <CustomerItem></CustomerItem>
-        <CustomerItem></CustomerItem>
-        <CustomerItem></CustomerItem>
-        <CustomerItem></CustomerItem>
-        <CustomerItem></CustomerItem>
-      </div>
-    </div>
-
-    <div class="du-customers-group du-px-5 du-pb-16">
-      <GroupName name="MEMBER" class-more="du-bg-gray-600 du-text-white"></GroupName>
       <div class="du-customer-items du-flex du-flex-wrap">
         <CustomerItem type="vip"></CustomerItem>
         <CustomerItem type="vip"></CustomerItem>
