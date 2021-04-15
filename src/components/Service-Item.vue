@@ -5,7 +5,7 @@
       <div class="du-service-item__left">
         <img :src="urlThumbnail" alt="Service Thumbnail" class="du-w-36">
       </div>
-      <div class="du-service-item__right du-flex du-flex-col du-justify-center du-flex-1 du-px-5 du-py-3">
+      <div class="du-service-item__right du-flex du-flex-col du-justify-center du-flex-1 du-px-5 du-py-3 du-border-2 du-rounded-r-lg">
         <div class="du-service-item__name du-pr-10 du-text-base du-font-bold">Eyebrow & Lips (Waxing)</div>
         <div class="du-service-item__footer du-flex du-items-center du-mt-2.5">
           <div class="du-service-item__allcost du-pr-4">
@@ -67,6 +67,17 @@ export default {
   .du-service__item .du-service-item__inner {
     background-color: #F3F4F6;
   }
+
+  .du-service-item__right {
+    border-left-width: 0;
+  }
+  .du-service__combo .du-service-item__right {
+    border-color: #FBBF24;
+  }
+  .du-service__item .du-service-item__right {
+    border-color: #D1D5DB;
+  }
+
 
   /** Name */
   .du-service-item__name {
