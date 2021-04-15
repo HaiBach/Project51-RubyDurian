@@ -11,7 +11,7 @@
           class="du-block du-mb-0"
           >
           <router-link :to="{ name: route.name, query: route.query }"
-            class="du-nav__link du-block du-p-2.5 du-m-2.5 du-rounded-md du-text-gray-500 du-text-2xl du-text-center hover:du-text-black focus:du-shadow-none">
+            class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
             <i :class="route.icon"></i>
           </router-link>
         </li>
@@ -22,7 +22,7 @@
         v-for="route in navBottom"
         :key="route.name"
         :to="{ name: route.name, query: route.query }"
-        class="du-nav__link du-block du-p-2.5 du-m-2.5 du-rounded-md du-text-gray-500 du-text-2xl du-text-center hover:du-text-black focus:du-shadow-none">
+        class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
         <i :class="route.icon"></i>
       </router-link>
     </div>
@@ -57,9 +57,14 @@ export default {
 
 
 <style scoped>
+  .du-nav__link {
+    font-size: 26px;
+    /* font-size: 22px; */
+  }
   .du-nav__link.du-active {
-    background-color: #DADADA;
+    background-color: #D1D5DB;
     color: #000;
+    /* border: 1px solid #9CA3AF; */
   }
   nav {
     min-height: calc(100% - 32px);

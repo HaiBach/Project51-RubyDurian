@@ -1,5 +1,5 @@
 <template>
-  <div class="du-nav__logo du-text-center du-py-5 du-px-2.5 hover:du-opacity-50">
+  <div class="du-nav__logo du-text-center du-py-6 du-px-2.5 du-transition-opacity hover:du-opacity-50">
     <router-link
       :to="{ name: linkto.name, query: linkto.query }"
       class="du-inline-block focus:du-shadow-none">
@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
   .du-nav__logo img {
-    width: 62px;
+    width: 60px;
     height: auto;
   }
 </style>

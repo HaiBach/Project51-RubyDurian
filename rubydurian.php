@@ -79,9 +79,9 @@ function rubydurian_load_vuescripts() {
   );
   wp_register_script(
     'rubydurian_backend_js',
-    plugin_dir_url( __FILE__ ) . 'src/main.js',
+    plugin_dir_url( __FILE__ ) . 'src/backend.js',
     array(),
-    filemtime( plugin_dir_path( __FILE__ ) . 'src/main.js' ),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/backend.js' ),
     true
   );
 }
@@ -140,13 +140,15 @@ function rubydurian_enqueue_admin($hook) {
     //   null,
     //   true
     // );
-    wp_enqueue_script(
-      'rubydurian_vendor_js',
-      plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('vendor'),
-      array(),
-      null,
-      true
-    );
+
+    // Script Vendor
+    // wp_enqueue_script(
+    //   'rubydurian_vendor_js',
+    //   plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file('vendor'),
+    //   array(),
+    //   null,
+    //   true
+    // );
 
     /** STYLE */
     wp_enqueue_style(
