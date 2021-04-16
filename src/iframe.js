@@ -26,7 +26,7 @@ const options = {
 }
 // Sử dụng `loadModule` để import components
 const { loadModule } = window['vue3-sfc-loader']
-const Iframe = loadModule('src/FrontEnd-Iframe.vue', options)
+const Iframe = loadModule('src/components/Iframe.vue', options)
 
 
 

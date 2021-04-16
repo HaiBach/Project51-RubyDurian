@@ -272,10 +272,10 @@ function rubydurian_register_menu() {
 }
 
 function rubydurian_htmlpage_home() {
-  require_once('src/pages/admin/page.php');
+  require_once('src/backend/page.php');
 }
 function rubydurian_htmlpage_page_default() {
-  require_once('src/pages/admin/page.php');
+  require_once('src/backend/page.php');
 }
 add_action('admin_menu', 'rubydurian_register_menu');
 
