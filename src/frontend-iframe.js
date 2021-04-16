@@ -11,8 +11,7 @@ const options = {
     vue: Vue
   },
   async getFile(url) {
-    // const fullURL = urlPlugin + url
-    const fullURL = url
+    const fullURL = urlPlugin + url
     const res = await fetch(fullURL)
     if ( !res.ok ) {
       throw Object.assign(new Error(res.statusText + ' ' + fullURL), { res })
@@ -27,7 +26,7 @@ const options = {
 }
 // Sử dụng `loadModule` để import components
 const { loadModule } = window['vue3-sfc-loader']
-const Iframe = loadModule('http://rubydurian.test:8888/wp-content/plugins/rubydurian/src/FrontEnd-Iframe.vue', options)
+const Iframe = loadModule('src/FrontEnd-Iframe.vue', options)
 
 
 

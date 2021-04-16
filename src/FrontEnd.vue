@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     srcIframe() {
-      return this.urlPlugin + 'frontend-iframe.html'
+      return this.urlPlugin + 'src/pages/frontend/iframe/'
     }
   }
 }
