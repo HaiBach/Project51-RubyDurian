@@ -22,6 +22,7 @@ function get_hashed_file_css($filename) {
 }
 $filename_css = get_hashed_file_css('index');
 $link_main_css = $url_plugin . 'dist/assets/' . $filename_css;
+$link_iframe_folder = $url_plugin . 'src/iframe/';
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +35,34 @@ $link_main_css = $url_plugin . 'dist/assets/' . $filename_css;
 
     <!-- Style -->
     <link rel="stylesheet" href="<?= $link_main_css ?>">
+    <style>
+      @font-face {
+        font-family: 'rubydurian-iframe';
+        src:
+          url('<?= $link_iframe_folder; ?>fonts/rubydurian-iframe.ttf?v3wua1') format('truetype'),
+          url('<?= $link_iframe_folder; ?>fonts/rubydurian-iframe.woff?v3wua1') format('woff'),
+          url('<?= $link_iframe_folder; ?>fonts/rubydurian-iframe.svg?v3wua1#rubydurian-iframe') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+      }
+
+      [class^="du-icon-"], [class*=" du-icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'rubydurian-iframe' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      <?php require_once('src/iframe/style-icons.php') ?>
+    </style>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/vue@next"></script>

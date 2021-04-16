@@ -1,29 +1,18 @@
 <template>
   <!-- HEADER -->
-  <header class="du-fixed du-top-0 du-left-0 du-w-full du-h-12">
-    <div class="header__inner du-flex du-justify-between du-p-2.5">
-      <div class="header__control">
-        <button class="header__back">Back</button>
-      </div>
-      <div class="header__title">
-        <h1 class="du-text-lg du-font-bold du-text-gray-800">1. TIME</h1>
-      </div>
-      <div class="header__owner">
-        <a href="#">Owner</a>
-      </div>
-    </div>
-  </header>
+  <Header title="1. TIME"></Header>
+
   <main class="du-mt-12">
     <div class="tabs">
 
       <div class="tab tab__time">
         <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
           <div class="pick-date du-flex du-justify-center">
-            <div class="du-p-2.5 du-rounded-md">Today &nbsp; < &nbsp; 07 Dec - 13 Dec &nbsp; ></div>
+            <div class="du-p-2.5 du-rounded-md">Today &nbsp; &nbsp; 07 Dec - 13 Dec &nbsp;</div>
           </div>
           <div class="calendar du-mb-10">
             <div class="calendar__header du-pt-2.5">
-              <ul class="du-flex du-border-b du-border-gray-600">
+              <ul class="du-flex du-border-b du-border-gray-500">
                 <li class="du-p-1.5 du-text-center du-text-xs">Mon</li>
                 <li class="du-p-1.5 du-text-center du-text-xs">Tue</li>
                 <li class="du-p-1.5 du-text-center du-text-xs">Wed</li>
@@ -35,7 +24,7 @@
             </div>
             <div class="calendar__weeks">
               <div class="calendar__week week__1">
-                <ul class="du-flex du-border-b du-border-gray-600">
+                <ul class="du-flex du-border-b du-border-gray-500">
                   <li class="du-inactive">30</li>
                   <li class="">1</li>
                   <li class="">2</li>
@@ -46,7 +35,7 @@
                 </ul>
               </div>
               <div class="calendar__week week__2">
-                <ul class="du-flex du-border-b du-border-gray-600">
+                <ul class="du-flex du-border-b du-border-gray-500">
                   <li class="">7</li>
                   <li class="">8</li>
                   <li class="">9</li>
@@ -57,7 +46,7 @@
                 </ul>
               </div>
               <div class="calendar__week week__3">
-                <ul class="du-flex du-border-b du-border-gray-600">
+                <ul class="du-flex du-border-b du-border-gray-500">
                   <li class="">14</li>
                   <li class="">15</li>
                   <li class="">16</li>
@@ -68,7 +57,7 @@
                 </ul>
               </div>
               <div class="calendar__week week__4">
-                <ul class="du-flex du-border-b du-border-gray-600">
+                <ul class="du-flex du-border-b du-border-gray-500">
                   <li class="">21</li>
                   <li class="">22</li>
                   <li class="">23</li>
@@ -79,7 +68,7 @@
                 </ul>
               </div>
               <div class="calendar__week week__5">
-                <ul class="du-flex du-border-b du-border-gray-600">
+                <ul class="du-flex du-border-b du-border-gray-500">
                   <li class="">28</li>
                   <li class="">29</li>
                   <li class="">30</li>
@@ -93,7 +82,7 @@
             </div>
           </div>
           <div class="date-time du-flex du-justify-center">
-            <a href="#" class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-gray-200 du-text-gray-800 du-text-base du-font-bold du-text-center">10 : 20</a>
+            <a href="#" class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-gray-100 du-text-gray-800 du-text-base du-font-medium du-text-center">10 : 20</a>
           </div>
         </div>
       </div>
@@ -101,14 +90,16 @@
     </div>
   </main>
   <footer>
-    <div class="footer__inner du-flex du-justify-center du-px-5 du-pt-5 du-pb-10">
-      <button class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-yellow-400 du-text-white">Next</button>
+    <div class="footer__inner du-flex du-justify-center du-px-5 du-py-10">
+      <button class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-yellow-400 du-text-gray-800">Next</button>
     </div>
   </footer>
 </template>
 
 
 <script>
+import Header from './Iframe-Header.vue'
+
 export default {
   data() {
     return {
@@ -116,18 +107,14 @@ export default {
       greeting: "Xin chào mọi người"
     }
   },
+  components: {
+    Header,
+  }
 }
 </script>
 
 
 <style scoped>
-  /** Header */
-  .header__inner {
-    background-color: #eee;
-  }
-  .header__title h1 {
-  }
-  
   /** Calendar */
   .calendar {
     width: 600px;
@@ -136,12 +123,13 @@ export default {
   }
   .calendar__header li {
     width: 14.28%;
+    color: #4B5563;
   }
   .calendar__week li {
     width: 14.28%;
     padding: 16px;
-    border-right: 1px solid #4B5563;
-    font-weight: 700;
+    border-right: 1px solid #6B7280;
+    font-weight: 500;
     text-align: center;
   }
   .calendar__week li:last-child {
