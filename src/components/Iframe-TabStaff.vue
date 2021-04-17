@@ -1,5 +1,5 @@
 <template>
-  <h1>SHOP</h1>
+  <h1>STAFF</h1>
   <div class="tab tab__time">
     <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
       <div class="pick-date du-flex du-justify-center">

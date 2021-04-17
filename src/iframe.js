@@ -27,6 +27,36 @@ const options = {
 // Sử dụng `loadModule` để import components
 const { loadModule } = window['vue3-sfc-loader']
 const Iframe = loadModule('src/components/Iframe.vue', options)
+const TabTime = loadModule('src/components/Iframe-TabTime.vue', options)
+const TabShop = loadModule('src/components/Iframe-TabShop.vue', options)
+const TabService = loadModule('src/components/Iframe-TabService.vue', options)
+const TabStaff = loadModule('src/components/Iframe-TabStaff.vue', options)
+const TabSignIn = loadModule('src/components/Iframe-TabSignIn.vue', options)
+const TabCustomerInfo = loadModule('src/components/Iframe-TabCustomerInfo.vue', options)
+const TabSummary = loadModule('src/components/Iframe-TabSummary.vue', options)
+const TabSuccess = loadModule('src/components/Iframe-TabSuccess.vue', options)
+
+
+
+
+
+// const Time = { template: '<div><h1>Time</h1></div>' }
+// const Shop = { template: '<div><h1>Shop</h1></div>' }
+const routes = [
+  { path: '/', component: () => TabTime },
+  { path: '/shop', component: () => TabShop },
+  { path: '/service', component: () => TabService },
+  { path: '/staff', component: () => TabStaff },
+  { path: '/sign-in', component: () => TabSignIn },
+  { path: '/customer-info', component: () => TabCustomerInfo },
+  { path: '/summary', component: () => TabSummary },
+  { path: '/success', component: () => TabSuccess },
+]
+
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
+  routes,
+})
 
 
 
@@ -47,4 +77,5 @@ const App = {
   },
 }
 const app = Vue.createApp(App)
+app.use(router)
 app.mount('#rubydurian-app')

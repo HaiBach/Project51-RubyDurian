@@ -66,6 +66,7 @@ $link_iframe_folder = $url_plugin . 'src/iframe/';
 
     <!-- Scripts -->
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
 
     <script type="text/javascript" class="rubydurian-script-value">

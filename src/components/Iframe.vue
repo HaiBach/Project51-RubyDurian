@@ -5,17 +5,25 @@
 
   <main class="du-mt-12">
     <div class="tabs">
-      <!-- Tab Time -->
-      <!-- <TabTime></TabTime> -->
-      <TabShop></TabShop>
+
+      <!-- Router Outlet -->
+      <router-view></router-view>
 
     </div>
   </main>
   <footer>
     <div class="footer__inner du-flex du-justify-center du-px-5 du-py-10">
-      <button class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-yellow-400 du-text-gray-800">Next</button>
+      <button class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-yellow-400 du-text-gray-800 du-text-center" @click="$router.go(1)">Next</button>
     </div>
   </footer>
+  <router-link to="/">Time</router-link>
+  <router-link to="/shop">Shop</router-link>
+  <router-link to="/service">Services</router-link>
+  <router-link to="/staff">Staffs</router-link>
+  <router-link to="/sign-in">Sign In</router-link>
+  <router-link to="/customer-info">Customer Info</router-link>
+  <router-link to="/summary">Summary</router-link>
+  <router-link to="/success">Success</router-link>
 </template>
 
 
