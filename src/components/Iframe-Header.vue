@@ -2,7 +2,7 @@
   <header class="du-fixed du-top-0 du-left-0 du-w-full du-h-12">
     <div class="header__inner du-flex du-justify-between du-items-center du-px-5 du-h-12">
       <div class="header__control">
-        <button class="header__back du-block du-w-14 du-p-2.5 du-rounded-md du-bg-white du-text-xs du-text-center">
+        <button class="header__back du-visible du-block du-w-14 du-p-2.5 du-rounded-md du-bg-white du-text-xs du-text-center">
           <i class="du-icon-back du-block"></i>
         </button>
       </div>
