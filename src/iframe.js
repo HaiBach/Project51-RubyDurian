@@ -26,15 +26,15 @@ const options = {
 }
 // Sử dụng `loadModule` để import components
 const { loadModule } = window['vue3-sfc-loader']
-const Iframe = loadModule('src/components/Iframe.vue', options)
-const TabTime = loadModule('src/components/Iframe-TabTime.vue', options)
-const TabShop = loadModule('src/components/Iframe-TabShop.vue', options)
-const TabService = loadModule('src/components/Iframe-TabService.vue', options)
-const TabStaff = loadModule('src/components/Iframe-TabStaff.vue', options)
-const TabSignIn = loadModule('src/components/Iframe-TabSignIn.vue', options)
-const TabCustomerInfo = loadModule('src/components/Iframe-TabCustomerInfo.vue', options)
-const TabSummary = loadModule('src/components/Iframe-TabSummary.vue', options)
-const TabSuccess = loadModule('src/components/Iframe-TabSuccess.vue', options)
+const Iframe = loadModule('src/components/iframe/Iframe.vue', options)
+const TabTime = loadModule('src/components/iframe/Iframe-TabTime.vue', options)
+const TabShop = loadModule('src/components/iframe/Iframe-TabShop.vue', options)
+const TabService = loadModule('src/components/iframe/Iframe-TabService.vue', options)
+const TabStaff = loadModule('src/components/iframe/Iframe-TabStaff.vue', options)
+const TabSignIn = loadModule('src/components/iframe/Iframe-TabSignIn.vue', options)
+const TabCustomerInfo = loadModule('src/components/iframe/Iframe-TabCustomerInfo.vue', options)
+const TabSummary = loadModule('src/components/iframe/Iframe-TabSummary.vue', options)
+const TabSuccess = loadModule('src/components/iframe/Iframe-TabSuccess.vue', options)
 
 
 

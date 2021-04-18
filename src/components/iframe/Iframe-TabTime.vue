@@ -1,5 +1,4 @@
 <template>
-  <h1>SIGN IN</h1>
   <div class="tab tab__time">
     <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
       <div class="pick-date du-flex du-justify-center">
@@ -76,17 +75,26 @@
 
         </div>
       </div>
+      <div class="date-time du-flex du-justify-center">
+        <a href="#" class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-gray-100 du-text-gray-800 du-text-base du-font-medium du-text-center">10 : 20</a>
+      </div>
     </div>
   </div>
+  <Footer to="/shop"></Footer>
 </template>
 
 
 <script>
+import Footer from './Iframe-Footer.vue'
+
 export default {
   data() {
     return {
     }
-  }
+  },
+  components: {
+    Footer,
+  },
 }
 </script>
 

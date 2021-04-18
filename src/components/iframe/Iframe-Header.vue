@@ -7,7 +7,7 @@
         </button>
       </div>
       <div class="header__title">
-        <h1 class="du-text-lg du-font-bold du-text-gray-800 du-tracking-wider">{{ getTitle() }}</h1>
+        <h1 class="du-text-lg du-font-medium du-text-gray-800">{{ getTitle() }}</h1>
       </div>
       <div class="header__owner">
         <button class="du-flex du-justify-center du-items-center du-p-2 du-w-14 du-text-gray-500 du-text-center">
@@ -35,10 +35,6 @@ export default {
         '/success': '8. SUCCESS',
       }
     }
-  },
-  computed: {
-    // getTitle() {
-    // }
   },
   methods: {
     getTitle() {
