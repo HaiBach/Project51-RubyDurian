@@ -1,6 +1,5 @@
 <template>
   <!-- HEADER -->
-  <!-- <Header title="1. TIME"></Header> -->
   <Header></Header>
 
   <main class="du-mt-12">
@@ -11,15 +10,14 @@
 
     </div>
   </main>
-  
-  <router-link to="/">Time</router-link>
+  <!-- <router-link to="/">Time</router-link>
   <router-link to="/shop">Shop</router-link>
   <router-link to="/service">Services</router-link>
   <router-link to="/staff">Staffs</router-link>
   <router-link to="/sign-in">Sign In</router-link>
   <router-link to="/customer-info">Customer Info</router-link>
   <router-link to="/summary">Summary</router-link>
-  <router-link to="/success">Success</router-link>
+  <router-link to="/success">Success</router-link> -->
 </template>
 
 

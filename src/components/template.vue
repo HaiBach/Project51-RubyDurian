@@ -1,5 +1,4 @@
 <template>
-  <p class="du-bg-blue-600">{{ greeting }} World!</p>
 </template>
 
 
@@ -7,7 +6,6 @@
 export default {
   data() {
     return {
-      greeting: "Xin chào mọi người"
     }
   }
 }

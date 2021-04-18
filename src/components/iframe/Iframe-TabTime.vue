@@ -79,8 +79,9 @@
         <a href="#" class="du-block du-w-64 du-px-5 du-py-2.5 du-rounded-md du-bg-gray-100 du-text-gray-800 du-text-base du-font-medium du-text-center">10 : 20</a>
       </div>
     </div>
+    
+    <Footer to="/shop"></Footer>
   </div>
-  <Footer to="/shop"></Footer>
 </template>
 
 

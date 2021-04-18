@@ -1,50 +1,48 @@
 <template>
-  <h1>SHOP</h1>
-  <div class="tab tab__time">
-    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
-      <div class="pick-date du-flex du-justify-center">
-        <div class="du-p-2.5 du-rounded-md">Today &nbsp; &nbsp; 07 Dec - 13 Dec &nbsp;</div>
-      </div>
+  <div class="tab tab__shop">
+    <div class="tab__inner du-flex du-flex-wrap du-pt-5">
+
+      <ShopItem></ShopItem>
+      <ShopItem></ShopItem>
+      <ShopItem></ShopItem>
     </div>
+
+    <Footer to="/service"></Footer>
   </div>
 </template>
 
 
 <script>
+import Footer from './Iframe-Footer.vue'
+import ShopItem from './Shop-Item.vue'
+
 export default {
   data() {
     return {
+      urlPlugin: window.rubydurianVA.urlPlugin,
     }
+  },
+  components: {
+    Footer, ShopItem,
   }
 }
 </script>
 
 
 <style scoped>
-  /** Calendar */
-  .calendar {
-    width: 600px;
+  .tab__inner {
+    max-width: 740px;
     margin-left: auto;
     margin-right: auto;
   }
-  .calendar__header li {
-    width: 14.28%;
-    color: #4B5563;
+
+  /** Shop Item */
+  .shop-item:hover .shop-item__inner  {
+    background-color: #FEF3C7;
+    border-color: #FBBF24;
   }
-  .calendar__week li {
-    width: 14.28%;
-    padding: 16px;
-    border-right: 1px solid #6B7280;
-    font-weight: 500;
-    text-align: center;
-  }
-  .calendar__week li:last-child {
-    border-right-width: 0;
-    color: #9CA3AF;
-    font-weight: 400;
-  }
-  .calendar__week li.du-inactive {
-    color: #9CA3AF;
-    font-weight: 400;
+  .shop-item__footer {
+    font-size: 12px;
+    color: #6B7280;
   }
 </style>
