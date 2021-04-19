@@ -1,8 +1,8 @@
 <template>
   <div class="tab tab__time">
-    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
+    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5 du-pb-10">
       <div class="pick-date du-flex du-justify-center">
-        <div class="du-p-2.5 du-rounded-md">Today &nbsp;<i class="du-icon-back"></i>&nbsp; 07 Dec - 13 Dec &nbsp;</div>
+        <div class="du-p-2.5 du-rounded-md">Today &nbsp;«&nbsp; 07 Dec - 13 Dec &nbsp;»</div>
       </div>
       <div class="calendar du-mb-10">
         <div class="calendar__header du-pt-2.5">

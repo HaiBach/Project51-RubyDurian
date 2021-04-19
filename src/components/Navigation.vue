@@ -13,7 +13,7 @@
           <router-link :to="{ name: route.name, query: route.query }"
             class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
             <i class="du-icon__first" :class="route.icon"></i>
-            <i class="du-icon__second du-text-gray-700" :class="route.iconActive"></i>
+            <i class="du-icon__second du-text-gray-800" :class="route.iconActive"></i>
           </router-link>
         </li>
       </ul>
@@ -25,7 +25,7 @@
         :to="{ name: route.name, query: route.query }"
         class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
         <i class="du-icon__first" :class="route.icon"></i>
-        <i class="du-icon__second du-text-gray-700" :class="route.iconActive"></i>
+        <i class="du-icon__second du-text-gray-800" :class="route.iconActive"></i>
       </router-link>
     </div>
   </nav>

@@ -1,5 +1,5 @@
 <template>
-  <header class="du-fixed du-top-0 du-left-0 du-w-full du-h-12">
+  <header class="du-fixed du-top-0 du-left-0 du-w-full du-h-12 du-z-50">
     <div class="header__inner du-flex du-justify-between du-items-center du-px-5 du-h-12">
       <div class="header__control">
         <button class="header__back du-visible du-block du-w-14 du-p-2.5 du-rounded-md du-bg-white du-text-xs du-text-center" @click="$router.back()">
@@ -27,8 +27,8 @@ export default {
       titleList: {
         '/': '1. TIME',
         '/shop': '2. SHOP',
-        '/service': '3. SERVICE',
-        '/staff': '4. STAFF',
+        '/service': '3. SERVICES',
+        '/staff': '4. STAFFS',
         '/sign-in': '5. SIGN IN',
         '/customer-info': '6. CUSTOMER INFOMATION',
         '/summary': '7. SUMMARY',
@@ -52,8 +52,13 @@ export default {
 
 <style scoped>
   /** Header */
+
   .header__inner {
-    background-color: #eee;
+    /* background-color: #eee; */
+    background-color: rgba(229,231,235, 0.75);
+    -webkit-backdrop-filter: saturate(250%) blur(20px);
+    backdrop-filter: saturate(250%) blur(20px);
+    z-index: 99;
   }
 
   /** Button Back */

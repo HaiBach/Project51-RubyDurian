@@ -1,6 +1,6 @@
 <template>
   <div class="tab tab__shop">
-    <div class="tab__inner du-flex du-flex-wrap du-pt-5">
+    <div class="tab__inner du-flex du-flex-wrap du-pt-5 du-pb-10">
 
       <ShopItem></ShopItem>
       <ShopItem></ShopItem>
@@ -14,7 +14,7 @@
 
 <script>
 import Footer from './Iframe-Footer.vue'
-import ShopItem from './Shop-Item.vue'
+import ShopItem from './TabShop-Item.vue'
 
 export default {
   data() {
