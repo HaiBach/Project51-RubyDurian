@@ -1,6 +1,6 @@
 <template>
   <div class="tab tab__time">
-    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5 du-pb-10">
+    <div class="tab__inner du-flex du-flex-col du-px-5 du-pt-5 du-pb-10">
       <div class="pick-date du-flex du-justify-center">
         <div class="du-p-2.5 du-rounded-md">Today &nbsp;«&nbsp; 07 Dec - 13 Dec &nbsp;»</div>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="tab tab__time">
-    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
+    <div class="tab__inner du-px-5 du-pt-5">
 
       <div class="staff-group du-pt-5 du-pb-10">
         <ServiceItem type="item"></ServiceItem>
@@ -38,4 +38,9 @@ export default {
 
 
 <style scoped>
+  .tab__inner {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>

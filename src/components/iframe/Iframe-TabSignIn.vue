@@ -1,9 +1,22 @@
 <template>
-  <h1>SIGN IN</h1>
   <div class="tab tab__time">
-    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
-      <div class="pick-date du-flex du-justify-center">
-        <div class="du-p-2.5 du-rounded-md">Today &nbsp;<i class="du-icon-back"></i>&nbsp; 07 Dec - 13 Dec &nbsp;</div>
+    <div class="tab__inner du-px-5 du-pt-5">
+      <div class="signin-form">
+        <form action="">
+          <div class="signin__email du-mb-2.5">
+            <input type="email" name="email" value="" placeholder="Email">
+          </div>
+          <div class="signin__password du-mb-2.5">
+            <input type="password" name="password" value="" placeholder="Password">
+          </div>
+          <div class="signin__submit du-mb-2.5">
+            <button type="submit" class="du-px-5 du-py-2.5 du-rounded-md du-bg-yellow-400 du-text-gray-800 du-text-center">Sign In</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="signin-social">
+        
       </div>
     </div>
   </div>
@@ -21,30 +34,15 @@ export default {
 
 
 <style scoped>
-  /** Calendar */
-  .calendar {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  input[type="email"],
+  input[type="password"] {
+    width: 320px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    background-color: #fff;
   }
-  .calendar__header li {
-    width: 14.28%;
-    color: #4B5563;
-  }
-  .calendar__week li {
-    width: 14.28%;
-    padding: 16px;
-    border-right: 1px solid #6B7280;
-    font-weight: 500;
-    text-align: center;
-  }
-  .calendar__week li:last-child {
-    border-right-width: 0;
-    color: #9CA3AF;
-    font-weight: 400;
-  }
-  .calendar__week li.du-inactive {
-    color: #9CA3AF;
-    font-weight: 400;
+  button {
+    width: 320px;
   }
 </style>
