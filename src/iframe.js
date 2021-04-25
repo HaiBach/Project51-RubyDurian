@@ -69,7 +69,6 @@ const App = {
   template: `<Iframe></Iframe>`,
   data() {
     return {
-      message: 'Xin chao moi nguoi 123'
     }
   },
   components: {

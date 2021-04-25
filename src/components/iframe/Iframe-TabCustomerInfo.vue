@@ -108,6 +108,5 @@ export default {
   }
   input[type="checkbox"]:checked + label::before {
     border-color: #F59E0B;
-    /* background-color: #FEF3C7; */
   }
 </style>

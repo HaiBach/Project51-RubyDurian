@@ -31,8 +31,8 @@ export default {
         '/staff': '4. STAFFS',
         '/sign-in': '5. SIGN IN',
         '/customer-info': '6. CUSTOMER INFOMATION',
-        '/summary': '7. SUMMARY',
-        '/success': '8. SUCCESS',
+        '/summary': '7. CONFIRM YOUR APPOINTMENT',
+        '/success': '8. SUCCESSFUL REGISTRATION',
       }
     }
   },
