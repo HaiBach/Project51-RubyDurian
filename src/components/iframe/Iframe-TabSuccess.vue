@@ -1,10 +1,23 @@
 <template>
-  <h1>SUCCESS</h1>
-  <div class="tab tab__time">
-    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
-      <div class="pick-date du-flex du-justify-center">
-        <div class="du-p-2.5 du-rounded-md">Today &nbsp;<i class="du-icon-back"></i>&nbsp; 07 Dec - 13 Dec &nbsp;</div>
+  <div class="tab tab__success">
+    <div class="tab__inner du-flex du-justify-center du-items-center du-px-10 du-py-10">
+      
+      <!-- Message -->
+      <div class="message du-px-10 du-py-7 du-rounded-2xl du-bg-gray-100 du-border du-border-gray-300">
+        <div class="message__icon du-mb-5 du-text-center">
+          <i class="du-icon-check-circle"></i>
+        </div>
+        <div class="message__text du-mb-7">
+          <p class="du-mb-5 du-leading-5 du-text-center du-text-gray-800">Congratulation,<br>
+            You have successfully registered<br>
+            appointment!<br>
+          </p>
+        </div>
+        <div class="message__btn">
+          <router-link to="/" class="message__link du-block du-w-64 du-px-5 du-py-2.5 du-mx-auto du-rounded-lg du-bg-yellow-400 du-text-gray-800 du-text-sm du-text-center hover:du-bg-yellow-700 hover:du-text-white">Finish</router-link>
+        </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -21,30 +34,15 @@ export default {
 
 
 <style scoped>
-  /** Calendar */
-  .calendar {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  .tab__inner {
+    min-height: calc(100vh - 48px);
   }
-  .calendar__header li {
-    width: 14.28%;
-    color: #4B5563;
+
+  /** Message */
+  .message {
+    width: 450px;
   }
-  .calendar__week li {
-    width: 14.28%;
-    padding: 16px;
-    border-right: 1px solid #6B7280;
-    font-weight: 500;
-    text-align: center;
-  }
-  .calendar__week li:last-child {
-    border-right-width: 0;
-    color: #9CA3AF;
-    font-weight: 400;
-  }
-  .calendar__week li.du-inactive {
-    color: #9CA3AF;
-    font-weight: 400;
+  .message__icon i {
+    font-size: 96px;
   }
 </style>
