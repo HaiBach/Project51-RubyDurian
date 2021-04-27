@@ -1,5 +1,5 @@
 <template>
-  <div class="shop-item du-w-1/2 du-p-3.5">
+  <div class="shop-item du-w-1/2 du-p-3.5 du-cursor-pointer" :class="classList" @click="toggleClassActive">
     <div class="shop-item__inner du-overflow-hidden du-rounded-lg du-border-2 du-border-gray-200 du-bg-gray-100">
       <div class="shop-item__header du-flex du-justify-center du-px-7 du-py-2.5">
         <img :src="urlPlugin + 'public/images/shop-1.jpg'" alt="Shop Thumbnail" class="du-block du-w-20 du-h-20 du-rounded-full">
@@ -19,9 +19,30 @@
 
 <script>
 export default {
+  props: ['isActived'],
   data() {
     return {
       urlPlugin: window.rubydurianVA.urlPlugin,
+      classList: {
+        'is-actived': this.isActived,
+        'du-active': this.isActived,
+      }
+    }
+  },
+  methods: {
+    toggleClassActive() {
+      const $el = this.$el
+      const classActive = 'du-active'
+      if (!this.isActived) {
+
+        /** TH: Khong co class `du-active`  */
+        if (!$el.classList.contains(classActive)) {
+          $el.classList.add(classActive)
+        }
+        else {
+          $el.classList.remove(classActive)
+        }
+      }
     }
   }
 }
@@ -31,6 +52,9 @@ export default {
 <style scoped>
   /** Shop Item */
   .shop-item:hover .shop-item__inner  {
+    border-color: #D1D5DB;
+  }
+  .shop-item.du-active .shop-item__inner  {
     background-color: #FEF3C7;
     border-color: #FBBF24;
   }

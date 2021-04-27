@@ -119,13 +119,36 @@ export default {
     transition: background-color 0.2s;
   }
   label::after {
-    content: '';
+    font-family: 'rubydurian-iframe' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: '\e908';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -1px;
+    left: -1px;
     display: block;
+    width: 24px;
+    height: 24px;
+    font-size: 27px;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+    transform: perspective(600px) rotate(-180deg) translate3d(0,0,-1000px);
   }
   input[type="checkbox"]:checked + label::before {
     border-color: #F59E0B;
+  }
+  input[type="checkbox"]:checked + label::after {
+    color: #F59E0B;
+    opacity: 1;
+    transform: perspective(600px) rotate(0deg) translate3d(0,0,0);
   }
 </style>

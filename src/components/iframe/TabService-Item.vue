@@ -1,5 +1,5 @@
 <template>
-  <div class="du-service-item du-mb-2.5" :class="classType">
+  <div class="du-service-item du-mb-2.5" :class="classList" @click="toggleClassActive">
     <div class="du-service-item__inner du-overflow-hidden du-flex du-rounded-lg">
 
       <div class="du-service-item__left">
@@ -12,21 +12,21 @@
 
         <div class="du-service-item__footer du-flex du-items-center">
           <div class="item-footer__left du-pl-5 du-border-l du-border-dashed du-border-gray-500">
-            <div class="du-item__allcost">
-              <i class="du-icon-clock du-pr-1.5"></i>
-              <span>20m</span>
+            <div class="du-item__cost du-flex du-items-center">
+              <i class="du-icon-attach-money du-inline-block du-pr-1"></i>
+              <span>20</span>
             </div>
-            <div class="du-item__return">
-              <i class="du-icon-clock du-pr-1.5"></i>
-              <span>20 mins</span>
+            <div class="du-item__time du-text-gray-400">
+              <i class="du-icon-timer2 du-inline-block du-pr-1.5"></i>
+              <span>20 min</span>
             </div>
           </div>
 
           <div class="item-footer__right du-pl-8">
             <form action="">
               <div class="form-checked du-relative">
-                <input type="checkbox" :id="'service-' + getIdRandom" name="service" value="Eyebrow & Lips (Waxing)" class="du-absolute du-invisible">
-                <label :for="'service-' + getIdRandom" class="du-block du-w-8 du-h-8"></label>
+                <input type="checkbox" :id="'service-' + inputID" name="service" value="Eyebrow & Lips (Waxing)" class="du-absolute du-invisible" :checked="isActived">
+                <label :for="'service-' + inputID" class="du-block du-w-8 du-h-8"></label>
               </div>
             </form>
           </div>
@@ -41,10 +41,11 @@
 
 <script>
 export default {
-  props: ['type'],
+  props: ['type', 'isActived'],
   data() {
     return {
       urlThumbnail: window.rubydurianVA.urlPlugin + '/public/service/service-01.png',
+      inputID: Math.round(Math.random() * 1000000),
       listType: {
         combo: {
           classType: 'du-service__combo',
@@ -52,15 +53,16 @@ export default {
         item: {
           classType: 'du-service__item',
         },
+      },
+      classList: {
+        'du-active': this.isActived,
+        'is-actived': this.isActived,
+        'du-service__combo': this.type === 'combo',
+        'du-service__item': this.type === 'item',
       }
     }
   },
   computed: {
-    getIdRandom() {
-      const id = Math.round(Math.random() * 100000)
-      return id
-    },
-
     // Return class phân biệt loại Customer component
     classType() {
       if (this.type !== undefined) {
@@ -68,12 +70,35 @@ export default {
       }
       return this.listType['item']['classType']
     },
-  }
+  },
+  methods: {
+    toggleClassActive() {
+      const $el = this.$el
+      const $input = document.getElementById('service-' + this.inputID)
+      const classActive = 'du-active'
+      if (!this.isActived) {
+
+        /** TH: Khong co class `du-active` */
+        if (!$el.classList.contains(classActive)) {
+          $el.classList.add(classActive)
+          $input.checked = true
+        }
+        else {
+          $el.classList.remove(classActive)
+          $input.checked = false
+        }
+      }
+    }
+  },
 }
 </script>
 
 
 <style scoped>
+  .du-service-item {
+    cursor: pointer;
+  }
+
   /** BACKGROUND + BORDER */
   .du-service__combo .du-service-item__inner {
     background-color: #F9FAFB;
@@ -91,7 +116,14 @@ export default {
   .du-service__item .du-service-item__right {
     border-color: #D1D5DB;
   }
-
+  
+  /** Item Active */
+  .du-service-item.du-active .du-service-item__inner {
+    background-color: #FEF3C7;
+  }
+  .du-service-item.du-active .du-service-item__right {
+    border-color: #FCD34D;
+  }
 
   /** Name */
   .du-service-item__name {
@@ -100,6 +132,16 @@ export default {
   /** Footer */
   .du-service-item__footer {
     font-size: 14px;
+  }
+
+  /** Icon */
+  .du-item__cost i {
+    height: 16px;
+    font-size: 16px;
+  }
+  .du-item__time i {
+    padding-left: 2px;
+    font-size: 13px;
   }
 
   /** Form */
@@ -120,14 +162,47 @@ export default {
     transition: background-color 0.2s;
   }
   label::after {
-    content: '';
+    font-family: 'rubydurian-iframe' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: '\e908';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -2px;
     display: block;
+    width: 32px;
+    height: 32px;
+    color: #D1D5DB;
+    font-size: 36px;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+    transform: perspective(600px) rotate(-180deg) translate3d(0,0,-1000px);
   }
   input[type="checkbox"]:checked + label::before {
     border-color: #F59E0B;
-    /* background-color: #FEF3C7; */
+    background-color: #F59E0B;
   }
+  input[type="checkbox"]:checked + label::after {
+    color: #fff;
+    opacity: 1;
+    transform: perspective(600px) rotate(0) translate3d(0,0,0);
+  }
+  /* .du-service-item.du-active label::before {
+    border-color: #F59E0B;
+    background-color: #F59E0B;
+  }
+  .du-service-item.du-active label::after {
+    color: #fff;
+    opacity: 1;
+    transform: perspective(600px) rotate(0) translate3d(0,0,0);
+  } */
 </style>

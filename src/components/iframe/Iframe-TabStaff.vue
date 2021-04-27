@@ -3,12 +3,12 @@
     <div class="tab__inner du-px-5 du-pt-5">
 
       <div class="staff-group du-pt-5 du-pb-10">
-        <ServiceItem type="item"></ServiceItem>
+        <ServiceItem type="item" isActived="true"></ServiceItem>
         <StaffItems></StaffItems>
       </div>
 
       <div class="staff-group du-pt-5 du-pb-10">
-        <ServiceItem type="item"></ServiceItem>
+        <ServiceItem type="item" isActived="true"></ServiceItem>
         <StaffItems></StaffItems>
       </div>
 
