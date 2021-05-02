@@ -302,3 +302,4 @@ function rubydurian_shortcode_example() {
   return $html;
 }
 add_shortcode( 'wpvue', 'rubydurian_shortcode_example' );
+add_shortcode( 'rubydurian-booking', 'rubydurian_shortcode_example' );
