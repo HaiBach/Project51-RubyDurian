@@ -1,6 +1,6 @@
 <template>
   <div class="tab tab__success">
-    <div class="tab__inner du-flex du-justify-center du-items-center du-px-10 du-py-10">
+    <div class="tab__inner du-flex du-justify-center du-items-center du-px-5 du-py-10">
       
       <!-- Message -->
       <div class="message du-px-10 du-py-7 du-rounded-2xl du-bg-gray-100 du-border du-border-gray-300">
@@ -14,7 +14,7 @@
           </p>
         </div>
         <div class="message__btn">
-          <router-link to="/" class="message__link du-block du-w-64 du-px-5 du-py-2.5 du-mx-auto du-rounded-lg du-bg-yellow-400 du-text-gray-800 du-text-sm du-text-center hover:du-bg-yellow-700 hover:du-text-white">Finish</router-link>
+          <router-link to="/" class="message__link du-block du-px-5 du-py-2.5 du-mx-auto du-rounded-lg du-bg-yellow-400 du-text-gray-800 du-text-sm du-text-center hover:du-bg-yellow-700 hover:du-text-white">Finish</router-link>
         </div>
       </div>
 
@@ -40,9 +40,14 @@ export default {
 
   /** Message */
   .message {
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
   }
   .message__icon i {
     font-size: 96px;
+  }
+  .message__btn a {
+    width: 100%;
+    max-width: 250px;
   }
 </style>

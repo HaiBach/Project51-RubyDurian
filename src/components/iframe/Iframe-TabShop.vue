@@ -45,4 +45,11 @@ export default {
     font-size: 12px;
     color: #6B7280;
   }
+
+  /** MEDIA **/
+  @media screen and (max-width: 450px) {
+    .shop-item {
+      width: 100%;
+    }
+  }
 </style>

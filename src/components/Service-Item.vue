@@ -87,4 +87,9 @@ export default {
   .du-service-item__footer {
     font-size: 12px;
   }
+
+  /** MEDIA **/
+  @media screen and (max-width: 450px) {
+    
+  }
 </style>

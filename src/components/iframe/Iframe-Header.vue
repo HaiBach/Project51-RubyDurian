@@ -7,7 +7,7 @@
         </button>
       </div>
       <div class="header__title">
-        <h1 class="du-text-lg du-font-medium du-text-gray-800">{{ getTitle() }}</h1>
+        <h1 class="du-text-lg du-font-medium du-text-gray-800 du-text-center">{{ getTitle() }}</h1>
       </div>
       <div class="header__owner">
         <button class="du-flex du-justify-center du-items-center du-p-2 du-w-14 du-text-gray-500 du-text-center">
@@ -52,9 +52,10 @@ export default {
 
 <style scoped>
   /** Header */
-
+  .header__title h1 {
+    line-height: 1.2;
+  }
   .header__inner {
-    /* background-color: #eee; */
     background-color: rgba(229,231,235, 0.75);
     -webkit-backdrop-filter: saturate(250%) blur(20px);
     backdrop-filter: saturate(250%) blur(20px);
@@ -72,5 +73,13 @@ export default {
   .header__owner button {
     display: block;
     font-size: 26px;
+  }
+
+  /** MEDIA */
+  @media screen and (max-width: 450px) {
+    .header__inner {
+      padding-left: 15px;
+      padding-right: 5px;
+    }
   }
 </style>

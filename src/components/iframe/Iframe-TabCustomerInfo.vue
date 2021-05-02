@@ -1,6 +1,6 @@
 <template>
   <div class="tab tab__customer">
-    <div class="tab__inner du-flex du-flex-col du-px-10 du-pt-5">
+    <div class="tab__inner du-flex du-flex-col du-px-5 du-pt-5">
 
       <!-- Tab Header -->
       <div class="tab__header">
@@ -61,7 +61,8 @@ export default {
 
 <style scoped>
   .tab__inner {
-    width: 680px;
+    width: 100%;
+    max-width: 680px;
     margin-left: auto;
     margin-right: auto;
   }

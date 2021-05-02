@@ -205,4 +205,44 @@ export default {
     opacity: 1;
     transform: perspective(600px) rotate(0) translate3d(0,0,0);
   } */
+
+  /** MEDIA **/
+  @media screen and (max-width: 450px) {
+    .du-service-item__right {
+      display: block;
+      padding: 12px 18px;
+    }
+    .du-service-item__name {
+      padding-right: 0;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .du-service-item__footer {
+      padding-top: 5px;
+    }
+    .item-footer__left {
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      border-left-width: 0;
+    }
+    .du-item__time {
+      padding-left: 20px;
+    }
+    label {
+      width: 24px;
+      height: 24px;
+    }
+    label::before {
+      width: 24px;
+      height: 24px;
+    }
+    label::after {
+      left: 0px;
+      top: 0px;
+      width: 24px;
+      height: 24px;
+      font-size: 26px;
+    }
+  }
 </style>

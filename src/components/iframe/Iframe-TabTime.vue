@@ -103,7 +103,8 @@ export default {
 <style scoped>
   /** Calendar */
   .calendar {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }

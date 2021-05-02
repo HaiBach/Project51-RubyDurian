@@ -48,7 +48,8 @@ export default {
 
 <style scoped>
   form {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
   }
   input[type="email"],
   input[type="password"] {

@@ -1,6 +1,6 @@
 <template>
   <div class="tab tab__summary">
-    <div class="tab__inner du-flex du-flex-col du-px-16 du-pt-5">
+    <div class="tab__inner du-flex du-flex-col du-px-5 du-pt-5">
       
       <!-- Table -->
       <table class="du-block du-w-full du-pb-7">
@@ -75,6 +75,13 @@ export default {
 
 
 <style scoped>
+  .tab__inner {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /** Table */
   th {
     padding: 7px 20px 7px 0;
@@ -150,5 +157,23 @@ export default {
     color: #F59E0B;
     opacity: 1;
     transform: perspective(600px) rotate(0deg) translate3d(0,0,0);
+  }
+
+  /** MEDIA **/
+  @media screen and (max-width: 450px) {
+    tr, th, td {
+      display: block;
+      width: 100%;
+    }
+    th {
+      padding: 0 0 5px;
+      /* color: #1F2937; */
+      font-size: 14px;
+      font-weight: 700;
+    }
+    td {
+      padding: 0 0 20px;
+      border-bottom: 1px dashed #ccc;
+    }
   }
 </style>

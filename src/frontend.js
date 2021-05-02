@@ -39,7 +39,6 @@ const App = {
   template: `<FrontEnd></FrontEnd>`,
   data() {
     return {
-      message: 'Xin chao moi nguoi 123'
     }
   },
   components: {
