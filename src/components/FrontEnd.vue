@@ -1,12 +1,22 @@
 <template>
   <p>
-    <button
+    <!-- <button
       class="rubydurian-button du-px-4 du-py-1.5 du-mb-2.5 du-rounded-md du-border du-border-yellow-500 du-bg-yellow-400 du-text-gray-800 du-text-sm"
       rel="rubydurianButton"
       :id="'rubydurian-button-' + btnID"
       @click="appendIframe"
-      >Booking on RubyDurian</button>
+      >Booking on RubyDurian</button> -->
+    
+    <a
+      class="rubybox du-px-4 du-py-1.5 du-mb-2.5 du-rounded-md du-border du-border-yellow-500 du-bg-yellow-400 du-text-gray-800 du-text-sm"
+      href=".rubydurian-iframe"
+      >Booking on RubyDurian</a>
   </p>
+  <div class="du-hidden">
+    <div class="rubydurian-iframe">
+      <iframe :src="srcIframe" width="800" height="600" title="Booking on RubyDurian" class="du-rounded-md du-bg-white"></iframe>
+    </div>
+  </div>
   <!-- <iframe :src="srcIframe" width="800" height="600" title="Booking on RubyDurian" class="du-rounded-md du-bg-white"></iframe> -->
 </template>
 
@@ -48,6 +58,15 @@ export default {
       }
     }
   },
+  mounted() {
+    /** RUN RUBYBOX */
+    const rubybox = jQuery('.rubybox').rubybox({
+      width : 800, // Kích thước của Rubybox
+      height : 600, // 100%, đơn vị là %
+      margin : [20, 10, 20, 10],
+      isOverClose : false // Bấm vào vùng xunh quanh để tắt Rubybox
+    })
+  }
 }
 </script>
 
@@ -56,8 +75,5 @@ export default {
   button.rubydurian-button {
     /* background-color: #F59E0B;
     color: #1F2937; */
-  }
-  iframe {
-    border: 1px solid rgba(0,0,0,0.5);
   }
 </style>

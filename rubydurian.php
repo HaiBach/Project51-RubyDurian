@@ -85,12 +85,25 @@ function rubydurian_loadscript_frontend() {
     filemtime( plugin_dir_path( __FILE__ ) . 'src/frontend.js' ),
     true
   );
+  wp_register_script(
+    'rubydurian_rubybox_js',
+    plugin_dir_url( __FILE__ ) . 'src/assets/rubybox.js',
+    array('jquery'),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/assets/rubybox.js' ),
+    true
+  );
 
   wp_register_style(
     'rubydurian_frontend_style',
     plugin_dir_url( __FILE__ ) . 'dist/assets/' . get_hashed_file_css('index'),
     array(),
     null
+  );
+  wp_register_style(
+    'rubydurian_rubybox_style',
+    plugin_dir_url( __FILE__ ) . 'src/css/rubybox.css',
+    array(),
+    filemtime( plugin_dir_path( __FILE__ ) . 'src/css/rubybox.css' ),
   );
 }
 add_action('wp_enqueue_scripts', 'rubydurian_loadscript_frontend');
@@ -295,8 +308,10 @@ function rubydurian_shortcode_example() {
   wp_enqueue_script('rubydurian_vuejs_next');
   wp_enqueue_script('rubydurian_vue_router');
   wp_enqueue_script('rubydurian_vue3_sfc_loader');
+  wp_enqueue_script('rubydurian_rubybox_js');
   wp_enqueue_script('rubydurian_frontend_js');
   wp_enqueue_style('rubydurian_frontend_style');
+  wp_enqueue_style('rubydurian_rubybox_style');
 
   $html = '<div id="rubydurian-app"></div>';
   return $html;
