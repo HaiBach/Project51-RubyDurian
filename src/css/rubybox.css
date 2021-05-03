@@ -108,3 +108,16 @@
 .rb01scroll-y {
     overflow-y : scroll;
 }
+
+/** MEDIA **/
+@media screen and (max-width: 474px) {
+    .rb01btn-close {
+        right: -4px;
+        top: -20px;
+        width: 32px;
+        height: 32px;
+    }
+    .rb01btn-close::after {
+        background-size: 35%;
+    }
+}
