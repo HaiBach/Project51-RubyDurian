@@ -8,7 +8,7 @@
       >Booking on RubyDurian</button> -->
     
     <a
-      class="rubybox du-px-4 du-py-1.5 du-mb-2.5 du-rounded-md du-border du-border-yellow-500 du-bg-yellow-400 du-text-gray-800 du-text-sm"
+      class="rubybox du-inline-block du-px-4 du-py-2 du-mb-2.5 du-rounded-md du-border du-border-yellow-500 du-bg-yellow-400 du-text-gray-800 du-text-sm"
       href=".rubydurian-iframe"
       >Booking on RubyDurian</a>
   </p>
