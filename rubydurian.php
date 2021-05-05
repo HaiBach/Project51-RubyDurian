@@ -103,7 +103,8 @@ function rubydurian_loadscript_frontend() {
     'rubydurian_rubybox_style',
     plugin_dir_url( __FILE__ ) . 'src/css/rubybox.css',
     array(),
-    filemtime( plugin_dir_path( __FILE__ ) . 'src/css/rubybox.css' ),
+    null
+    // filemtime( plugin_dir_path( __FILE__ ) . 'src/css/rubybox.css' ),
   );
 }
 add_action('wp_enqueue_scripts', 'rubydurian_loadscript_frontend');
