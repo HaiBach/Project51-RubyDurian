@@ -62,6 +62,21 @@ $link_iframe_folder = $url_plugin . 'src/iframe/';
         -moz-osx-font-smoothing: grayscale;
       }
       <?php require_once('src/iframe/style-icons.php') ?>
+
+      /** Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        background-color: rgba(0,0,0,0.15);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0,0,0,0.5);
+      }
     </style>
 
     <!-- Scripts -->
