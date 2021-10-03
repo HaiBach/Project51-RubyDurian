@@ -45,6 +45,9 @@
   .rubydurian_page_rubydurian-options #wpfooter {
     display: none;
   } */
+  #wpcontent {
+    padding-left: 0;
+  }
   #wpfooter {
     display: none;
   }
@@ -61,7 +64,7 @@
 
 
   /** RubyDurian App */
-  #rubydurian-app {
+  /* #rubydurian-app {
     margin-left: -20px;
     width: calc(100% + 20px);
     min-height: calc(100vh - 32px);
@@ -70,6 +73,31 @@
     border: none;
   }
   #rubydurian-main {
+    
+  } */
+  #rubydurian-app {
+    position: relative;
+    display: grid;
+    grid-template-areas:  'nav header'
+                          'nav main';
+    grid-template-rows: 56px auto;
+    grid-template-columns: 96px 1fr;
+  }
+  #rubydurian-nav {
+    grid-area: nav;
+  }
+  .du-nav__inner {
+    position: sticky;
+    top: 32px;
+    min-height: calc(100vh - 32px);
+  }
+  #rubydurian-header {
+    grid-area: header;
+    position: sticky;
+    top: 32px;
+  }
+  #rubydurian-maincontent {
+    grid-area: main;
     
   }
 </style>

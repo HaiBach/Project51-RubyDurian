@@ -1,5 +1,5 @@
 <template>
-  <header class="du-fixed du-h-14 du-flex du-justify-between du-items-center du-px-10 du-border-b">
+  <header id="rubydurian-header" class="du-h-14 du-flex du-justify-between du-items-center du-px-10 du-border-b" style="background-color: red">
     <div class="du-header__left">
       <h2 class="du-text-xl du-font-bold">{{ title }}</h2>
     </div>
@@ -51,7 +51,9 @@ export default {
 
 <style scoped>
   header {
+    /**
     width: calc(100% - 256px);
+    **/
     border-color: rgba(0,0,0,0.15);
     background-color: rgba(255,255,255, 0.75);
     -webkit-backdrop-filter: saturate(180%) blur(20px);

@@ -33,7 +33,7 @@ const options = {
 }
 // Sử dụng `loadModule` để import components
 const { loadModule } = window['vue3-sfc-loader']
-const Navigation = loadModule('/src/components/Navigation.vue', options)
+const RubyNavigation = loadModule('/src/components/RubyNavigation.vue', options)
 const Dashboard = loadModule('/src/components/Dashboard.vue', options)
 const Booking = loadModule('/src/components/Booking.vue', options)
 const Customers = loadModule('/src/components/Customers.vue', options)
@@ -127,7 +127,7 @@ function changeWordpressMenuCurrent() {
 const App = {
   components: {
     // 'Navigation': () => Navigation,
-    'Navigation': Vue.defineAsyncComponent( () => Navigation ),
+    'RubyNavigation': Vue.defineAsyncComponent( () => RubyNavigation ),
   },
 }
 const app = Vue.createApp(App)

@@ -1,32 +1,34 @@
 <template>
-  <nav id="rubydurian-nav" class="du-fixed du-flex du-flex-col du-justify-between du-w-24 du-bg-gray-100">
-    <div class="du-nav__top">
-      <!-- Logo -->
-      <Logo></Logo>
+  <nav id="rubydurian-nav" class="du-bg-gray-100">
+    <div class="du-nav__inner" class="du-flex du-flex-col du-justify-between">
+      <div class="du-nav__top">
+        <!-- Logo -->
+        <Logo></Logo>
 
-      <ul class="du-flex du-flex-col">
-        <li
-          v-for="route in navTop"
+        <ul class="du-flex du-flex-col">
+          <li
+            v-for="route in navTop"
+            :key="route.name"
+            class="du-block du-mb-0"
+            >
+            <router-link :to="{ name: route.name, query: route.query }"
+              class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
+              <i class="du-icon__first" :class="route.icon"></i>
+              <i class="du-icon__second du-text-gray-800" :class="route.iconActive"></i>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+      <div class="du-nav__bottom">
+        <router-link
+          v-for="route in navBottom"
           :key="route.name"
-          class="du-block du-mb-0"
-          >
-          <router-link :to="{ name: route.name, query: route.query }"
-            class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
-            <i class="du-icon__first" :class="route.icon"></i>
-            <i class="du-icon__second du-text-gray-800" :class="route.iconActive"></i>
-          </router-link>
-        </li>
-      </ul>
-    </div>
-    <div class="du-nav__bottom">
-      <router-link
-        v-for="route in navBottom"
-        :key="route.name"
-        :to="{ name: route.name, query: route.query }"
-        class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
-        <i class="du-icon__first" :class="route.icon"></i>
-        <i class="du-icon__second du-text-gray-800" :class="route.iconActive"></i>
-      </router-link>
+          :to="{ name: route.name, query: route.query }"
+          class="du-nav__link du-block du-p-2.5 du-mx-2.5 du-mb-2.5 du-rounded-md du-border du-border-transparent du-text-gray-500 du-text-center du-transition-colors hover:du-bg-gray-200 hover:du-text-black focus:du-shadow-none">
+          <i class="du-icon__first" :class="route.icon"></i>
+          <i class="du-icon__second du-text-gray-800" :class="route.iconActive"></i>
+        </router-link>
+      </div>
     </div>
   </nav>
 </template>

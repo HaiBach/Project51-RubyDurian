@@ -1,11 +1,11 @@
-<section id="rubydurian-app" class="du-flex">
-  <Navigation></Navigation>
+<section id="rubydurian-app">
+  <ruby-navigation></ruby-navigation>
 
   <!-- Main -->
-  <main id="rubydurian-main" class="du-relative du-bg-white du-flex-1 du-ml-24">
+  <!-- <main id="rubydurian-main" class="du-relative du-bg-white du-flex-1 du-ml-24"> -->
     <!-- Route Outlet -->
     <router-view></router-view>
-  </main>
+  <!-- </main> -->
 </section>
 
 
